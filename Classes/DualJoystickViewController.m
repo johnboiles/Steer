@@ -64,10 +64,10 @@
 
 - (void)touchJoystickView:(TouchJoystickView *)TouchJoystickView didMoveToHorizontalPosition:(double)horizontalPosition verticalPosition:(double)verticalPosition {
   if (TouchJoystickView == _powerJoystick) {
-    NSLog(@"Power joystick moved to position %f", verticalPosition);
+    Debug(@"Power joystick moved to position %f", verticalPosition);
     _powerValue = verticalPosition;
   } else if (TouchJoystickView == _steeringJoystick) {
-    NSLog(@"Steering joystick moved to position %f", horizontalPosition);
+    Debug(@"Steering joystick moved to position %f", horizontalPosition);
     _steeringValue = horizontalPosition;
   }
   [self setSteering:_steeringValue power:_powerValue];

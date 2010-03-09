@@ -18,10 +18,14 @@
       self.opaque = NO;
       _delegate = delegate;
       // Initialization code
+      
       _stick = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FatSliderThumb.png"]];
       _stick.backgroundColor = [UIColor clearColor];
-      _stick.alpha = 0.5;
+      
+      //_stick = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
       //_stick.backgroundColor = [[UIColor alloc] initWithRed:0 green:1 blue:0 alpha:0.5];
+      
+      _stick.alpha = 0.5;      
       _stick.center = CGPointMake(frame.size.width / 2, frame.size.height / 2);
       [self addSubview:_stick];
       self.clipsToBounds = NO;
@@ -89,7 +93,7 @@
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   NSArray *touchesArray = [touches allObjects];
   CGPoint point = [[touchesArray objectAtIndex:0] locationInView:self];
-  NSLog(@"Touches Began x:%f y:%f", point.x, point.y);
+  Debug(@"Touches Began x:%f y:%f", point.x, point.y);
   point = [self _boundPointToViewSize:point];
   double horizontalPosition = [self _horizontalPositionFromPoint:point];
   double verticalPosition = [self _verticalPostionFromPoint:point];
@@ -98,7 +102,7 @@
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-  NSLog(@"Touches Cancelled");
+  Debug(@"Touches Cancelled");
   // Inform delegate that we're moving back to the center
   [_delegate touchJoystickView:self didMoveToHorizontalPosition:0 verticalPosition:0];
   // Animate sticks back to the center
@@ -106,7 +110,7 @@
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-  NSLog(@"Touches Ended");
+  Debug(@"Touches Ended");
   // Inform delegate that we're moving back to the center
   [_delegate touchJoystickView:self didMoveToHorizontalPosition:0 verticalPosition:0];
   // Animate sticks back to the center
@@ -116,7 +120,7 @@
 - (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
   NSArray *touchesArray = [touches allObjects];
   CGPoint point = [[touchesArray objectAtIndex:0] locationInView:self];
-  NSLog(@"Touches Moved x:%f y:%f", point.x, point.y);
+  Debug(@"Touches Moved x:%f y:%f", point.x, point.y);
   point = [self _boundPointToViewSize:point];
   double horizontalPosition = [self _horizontalPositionFromPoint:point];
   double verticalPosition = [self _verticalPostionFromPoint:point];
