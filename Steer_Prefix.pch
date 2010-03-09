@@ -6,3 +6,6 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
+
+#define Debug(...) do { } while (0)
+//#define Debug(...) NSLog(__VA_ARGS__)

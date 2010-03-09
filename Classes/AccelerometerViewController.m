@@ -81,7 +81,7 @@ tiltAngleMax=_tiltAngleMax, rollAngleMax=_rollAngleMax;
 
 - (void)setRollAngleMax:(double)rollAngleMax {
   if (rollAngleMax > 1.57) {
-    NSLog(@"WARNING: Setting rollAngleMax too large, defaulting to 1.57");
+    Debug(@"WARNING: Setting rollAngleMax too large, defaulting to 1.57");
     _rollAngleMax = 1.57;
   } else {
     _rollAngleMax = rollAngleMax;
@@ -90,7 +90,7 @@ tiltAngleMax=_tiltAngleMax, rollAngleMax=_rollAngleMax;
 
 - (void)setTiltAngleMax:(double)tiltAngleMax {
   if (tiltAngleMax > 1.57) {
-    NSLog(@"WARNING: Setting tiltAngleMax too large, defaulting to 1.57");
+    Debug(@"WARNING: Setting tiltAngleMax too large, defaulting to 1.57");
     _tiltAngleMax = 1.57;
   } else {
     _tiltAngleMax = tiltAngleMax;
@@ -171,7 +171,7 @@ tiltAngleMax=_tiltAngleMax, rollAngleMax=_rollAngleMax;
     if (rollAngle > _rollAngleMax) rollAngle = _rollAngleMax;
     if (rollAngle < -_rollAngleMax) rollAngle = -_rollAngleMax;
     
-    NSLog(@"Accelerometer angles are xy:%f zx:%f yz:%f", xyAngle, xzAngle, yzAngle);
+    Debug(@"Accelerometer angles are xy:%f zx:%f yz:%f", xyAngle, xzAngle, yzAngle);
     [self _setSteering:(rollAngle / _rollAngleMax) power:(tiltAngle / _tiltAngleMax) animated:NO];
   }
 }
@@ -179,18 +179,18 @@ tiltAngleMax=_tiltAngleMax, rollAngleMax=_rollAngleMax;
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   NSArray *touchesArray = [touches allObjects];
   CGPoint point = [[touchesArray objectAtIndex:0] locationInView:self.view];
-  NSLog(@"Touches Began x:%f y:%f", point.x, point.y);
+  Debug(@"Touches Began x:%f y:%f", point.x, point.y);
   self.accelerometerActive = YES;
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-  NSLog(@"Touches Cancelled");
+  Debug(@"Touches Cancelled");
   self.accelerometerActive = NO;
   [self _setSteering:0 power:0 animated:YES];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-  NSLog(@"Touches Ended");
+  Debug(@"Touches Ended");
   self.accelerometerActive = NO;
   [self _setSteering:0 power:0 animated:YES];
 }
