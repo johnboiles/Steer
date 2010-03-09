@@ -45,12 +45,11 @@ tiltAngleMax=_tiltAngleMax, rollAngleMax=_rollAngleMax;
   _accelerometerView.delegate = self;
   self.view = _accelerometerView;
 
-  UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];  
-  stopButton.frame = CGRectMake(460, 0, 20, 20);
-  [stopButton setTitle:@"Quit" forState:UIControlStateNormal];
+  UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  [stopButton setBackgroundImage:[UIImage imageNamed:@"x.png"] forState:UIControlStateNormal];
+  stopButton.frame = CGRectMake(440, 0, 40, 40);
   [stopButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:stopButton];
-  
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -33,9 +33,10 @@
   _steeringJoystick.horizontalAxis = YES;
   [self.view addSubview:_steeringJoystick];
   
-  UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  stopButton.frame = CGRectMake(460, 0, 20, 20);
-  [stopButton setTitle:@"Quit" forState:UIControlStateNormal];
+  //UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  [stopButton setBackgroundImage:[UIImage imageNamed:@"x.png"] forState:UIControlStateNormal];
+  stopButton.frame = CGRectMake(440, 0, 40, 40);
   [stopButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:stopButton];
 }

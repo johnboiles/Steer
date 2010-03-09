@@ -576,7 +576,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 48";
 		rLen = 0;
-		rLoc = 1429;
+		rLoc = 1618;
 		rType = 0;
 		vrLen = 1265;
 		vrLoc = 1241;
@@ -1284,7 +1284,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 48";
 		rLen = 0;
-		rLoc = 1429;
+		rLoc = 1618;
 		rType = 0;
 		vrLen = 1365;
 		vrLoc = 1141;
@@ -1846,16 +1846,16 @@
 	};
 	42A21E261143331C00FDE34A /* DualJoystickViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1153, 1232}}";
-			sepNavSelRange = "{1429, 0}";
-			sepNavVisRange = "{1141, 1365}";
+			sepNavIntBoundsRect = "{{0, 0}, {1247, 1296}}";
+			sepNavSelRange = "{1005, 0}";
+			sepNavVisRange = "{468, 1276}";
 		};
 	};
 	42A21E461143396200FDE34A /* TouchJoystickView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1247, 2224}}";
-			sepNavSelRange = "{661, 0}";
-			sepNavVisRange = "{171, 1211}";
+			sepNavIntBoundsRect = "{{0, 0}, {1247, 2272}}";
+			sepNavSelRange = "{503, 79}";
+			sepNavVisRange = "{78, 1155}";
 		};
 	};
 	42A21F0D11435E6D00FDE34A /* AccelerometerViewController.h */ = {
