@@ -7,6 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00FE47481146335F00D921B0 /* FFAVFrameQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47311146335F00D921B0 /* FFAVFrameQueue.m */; };
+		00FE47491146335F00D921B0 /* FFGLDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47341146335F00D921B0 /* FFGLDrawable.m */; };
+		00FE474A1146335F00D921B0 /* FFGLTestDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47361146335F00D921B0 /* FFGLTestDrawable.m */; };
+		00FE474B1146335F00D921B0 /* FFMPEGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47381146335F00D921B0 /* FFMPEGAppDelegate.m */; };
+		00FE474C1146335F00D921B0 /* FFPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE473A1146335F00D921B0 /* FFPlayer.m */; };
+		00FE474D1146335F00D921B0 /* GHGLTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE473F1146335F00D921B0 /* GHGLTexture.m */; };
+		00FE474E1146335F00D921B0 /* GHGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47421146335F00D921B0 /* GHGLView.m */; };
+		00FE474F1146335F00D921B0 /* GHGLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47441146335F00D921B0 /* GHGLViewController.m */; };
+		00FE47501146335F00D921B0 /* GHTextureManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47471146335F00D921B0 /* GHTextureManager.m */; };
+		00FE47521146337800D921B0 /* libavcodec.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE47511146337800D921B0 /* libavcodec.a */; };
+		00FE47541146338100D921B0 /* libavfilter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE47531146338100D921B0 /* libavfilter.a */; };
+		00FE47561146338C00D921B0 /* libavformat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE47551146338C00D921B0 /* libavformat.a */; };
+		00FE47581146339800D921B0 /* libavutil.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE47571146339800D921B0 /* libavutil.a */; };
+		00FE475A114633A200D921B0 /* libpostproc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE4759114633A200D921B0 /* libpostproc.a */; };
+		00FE475C114633AD00D921B0 /* libswscale.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE475B114633AD00D921B0 /* libswscale.a */; };
+		00FE475E114633B700D921B0 /* libavdevice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE475D114633B700D921B0 /* libavdevice.a */; };
+		00FE47721146344B00D921B0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE47711146344B00D921B0 /* OpenGLES.framework */; };
+		00FE47781146346E00D921B0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE47771146346E00D921B0 /* libz.dylib */; };
+		00FE478F1146348F00D921B0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00FE478E1146348F00D921B0 /* QuartzCore.framework */; };
 		1D3623260D0F684500981E51 /* SteerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* SteerAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -28,6 +47,39 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00FE47301146335F00D921B0 /* FFAVFrameQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAVFrameQueue.h; sourceTree = "<group>"; };
+		00FE47311146335F00D921B0 /* FFAVFrameQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAVFrameQueue.m; sourceTree = "<group>"; };
+		00FE47321146335F00D921B0 /* FFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDefines.h; sourceTree = "<group>"; };
+		00FE47331146335F00D921B0 /* FFGLDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFGLDrawable.h; sourceTree = "<group>"; };
+		00FE47341146335F00D921B0 /* FFGLDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFGLDrawable.m; sourceTree = "<group>"; };
+		00FE47351146335F00D921B0 /* FFGLTestDrawable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFGLTestDrawable.h; sourceTree = "<group>"; };
+		00FE47361146335F00D921B0 /* FFGLTestDrawable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFGLTestDrawable.m; sourceTree = "<group>"; };
+		00FE47371146335F00D921B0 /* FFMPEGAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFMPEGAppDelegate.h; sourceTree = "<group>"; };
+		00FE47381146335F00D921B0 /* FFMPEGAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFMPEGAppDelegate.m; sourceTree = "<group>"; };
+		00FE47391146335F00D921B0 /* FFPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPlayer.h; sourceTree = "<group>"; };
+		00FE473A1146335F00D921B0 /* FFPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPlayer.m; sourceTree = "<group>"; };
+		00FE473C1146335F00D921B0 /* GHGLCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLCommon.h; sourceTree = "<group>"; };
+		00FE473D1146335F00D921B0 /* GHGLDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLDefines.h; sourceTree = "<group>"; };
+		00FE473E1146335F00D921B0 /* GHGLTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLTexture.h; sourceTree = "<group>"; };
+		00FE473F1146335F00D921B0 /* GHGLTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLTexture.m; sourceTree = "<group>"; };
+		00FE47401146335F00D921B0 /* GHGLUCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLUCommon.h; sourceTree = "<group>"; };
+		00FE47411146335F00D921B0 /* GHGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLView.h; sourceTree = "<group>"; };
+		00FE47421146335F00D921B0 /* GHGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLView.m; sourceTree = "<group>"; };
+		00FE47431146335F00D921B0 /* GHGLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHGLViewController.h; sourceTree = "<group>"; };
+		00FE47441146335F00D921B0 /* GHGLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHGLViewController.m; sourceTree = "<group>"; };
+		00FE47451146335F00D921B0 /* GHQuaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHQuaternion.h; sourceTree = "<group>"; };
+		00FE47461146335F00D921B0 /* GHTextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GHTextureManager.h; sourceTree = "<group>"; };
+		00FE47471146335F00D921B0 /* GHTextureManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GHTextureManager.m; sourceTree = "<group>"; };
+		00FE47511146337800D921B0 /* libavcodec.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavcodec.a; path = Libraries/ffmpeg/libavcodec/libavcodec.a; sourceTree = "<group>"; };
+		00FE47531146338100D921B0 /* libavfilter.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavfilter.a; path = Libraries/ffmpeg/libavfilter/libavfilter.a; sourceTree = "<group>"; };
+		00FE47551146338C00D921B0 /* libavformat.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavformat.a; path = Libraries/ffmpeg/libavformat/libavformat.a; sourceTree = "<group>"; };
+		00FE47571146339800D921B0 /* libavutil.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavutil.a; path = Libraries/ffmpeg/libavutil/libavutil.a; sourceTree = "<group>"; };
+		00FE4759114633A200D921B0 /* libpostproc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libpostproc.a; path = Libraries/ffmpeg/libpostproc/libpostproc.a; sourceTree = "<group>"; };
+		00FE475B114633AD00D921B0 /* libswscale.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libswscale.a; path = Libraries/ffmpeg/libswscale/libswscale.a; sourceTree = "<group>"; };
+		00FE475D114633B700D921B0 /* libavdevice.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libavdevice.a; path = Libraries/ffmpeg/libavdevice/libavdevice.a; sourceTree = "<group>"; };
+		00FE47711146344B00D921B0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		00FE47771146346E00D921B0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		00FE478E1146348F00D921B0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D3623240D0F684500981E51 /* SteerAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SteerAppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* SteerAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SteerAppDelegate.m; sourceTree = "<group>"; };
@@ -72,12 +124,60 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765FD0DF74451002DB57D /* CoreGraphics.framework in Frameworks */,
+				00FE47521146337800D921B0 /* libavcodec.a in Frameworks */,
+				00FE47541146338100D921B0 /* libavfilter.a in Frameworks */,
+				00FE47561146338C00D921B0 /* libavformat.a in Frameworks */,
+				00FE47581146339800D921B0 /* libavutil.a in Frameworks */,
+				00FE475A114633A200D921B0 /* libpostproc.a in Frameworks */,
+				00FE475C114633AD00D921B0 /* libswscale.a in Frameworks */,
+				00FE475E114633B700D921B0 /* libavdevice.a in Frameworks */,
+				00FE47721146344B00D921B0 /* OpenGLES.framework in Frameworks */,
+				00FE47781146346E00D921B0 /* libz.dylib in Frameworks */,
+				00FE478F1146348F00D921B0 /* QuartzCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00FE472F1146335F00D921B0 /* FFMPEG */ = {
+			isa = PBXGroup;
+			children = (
+				00FE47301146335F00D921B0 /* FFAVFrameQueue.h */,
+				00FE47311146335F00D921B0 /* FFAVFrameQueue.m */,
+				00FE47321146335F00D921B0 /* FFDefines.h */,
+				00FE47331146335F00D921B0 /* FFGLDrawable.h */,
+				00FE47341146335F00D921B0 /* FFGLDrawable.m */,
+				00FE47351146335F00D921B0 /* FFGLTestDrawable.h */,
+				00FE47361146335F00D921B0 /* FFGLTestDrawable.m */,
+				00FE47371146335F00D921B0 /* FFMPEGAppDelegate.h */,
+				00FE47381146335F00D921B0 /* FFMPEGAppDelegate.m */,
+				00FE47391146335F00D921B0 /* FFPlayer.h */,
+				00FE473A1146335F00D921B0 /* FFPlayer.m */,
+				00FE473B1146335F00D921B0 /* OpenGL */,
+			);
+			path = FFMPEG;
+			sourceTree = "<group>";
+		};
+		00FE473B1146335F00D921B0 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				00FE473C1146335F00D921B0 /* GHGLCommon.h */,
+				00FE473D1146335F00D921B0 /* GHGLDefines.h */,
+				00FE473E1146335F00D921B0 /* GHGLTexture.h */,
+				00FE473F1146335F00D921B0 /* GHGLTexture.m */,
+				00FE47401146335F00D921B0 /* GHGLUCommon.h */,
+				00FE47411146335F00D921B0 /* GHGLView.h */,
+				00FE47421146335F00D921B0 /* GHGLView.m */,
+				00FE47431146335F00D921B0 /* GHGLViewController.h */,
+				00FE47441146335F00D921B0 /* GHGLViewController.m */,
+				00FE47451146335F00D921B0 /* GHQuaternion.h */,
+				00FE47461146335F00D921B0 /* GHTextureManager.h */,
+				00FE47471146335F00D921B0 /* GHTextureManager.m */,
+			);
+			path = OpenGL;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,10 +213,12 @@
 			isa = PBXGroup;
 			children = (
 				080E96DDFE201D6D7F000001 /* Classes */,
+				00FE472F1146335F00D921B0 /* FFMPEG */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				00FE478E1146348F00D921B0 /* QuartzCore.framework */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -144,6 +246,15 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00FE475D114633B700D921B0 /* libavdevice.a */,
+				00FE475B114633AD00D921B0 /* libswscale.a */,
+				00FE4759114633A200D921B0 /* libpostproc.a */,
+				00FE47571146339800D921B0 /* libavutil.a */,
+				00FE47551146338C00D921B0 /* libavformat.a */,
+				00FE47531146338100D921B0 /* libavfilter.a */,
+				00FE47511146337800D921B0 /* libavcodec.a */,
+				00FE47711146344B00D921B0 /* OpenGLES.framework */,
+				00FE47771146346E00D921B0 /* libz.dylib */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
@@ -242,6 +353,15 @@
 				420C75391144F065008F46B4 /* AccelerometerConfigurationViewController.m in Sources */,
 				421539A21146029E0011C7B6 /* LookAndFeel.m in Sources */,
 				421539E911460AC00011C7B6 /* MainConfigurationViewController.m in Sources */,
+				00FE47481146335F00D921B0 /* FFAVFrameQueue.m in Sources */,
+				00FE47491146335F00D921B0 /* FFGLDrawable.m in Sources */,
+				00FE474A1146335F00D921B0 /* FFGLTestDrawable.m in Sources */,
+				00FE474B1146335F00D921B0 /* FFMPEGAppDelegate.m in Sources */,
+				00FE474C1146335F00D921B0 /* FFPlayer.m in Sources */,
+				00FE474D1146335F00D921B0 /* GHGLTexture.m in Sources */,
+				00FE474E1146335F00D921B0 /* GHGLView.m in Sources */,
+				00FE474F1146335F00D921B0 /* GHGLViewController.m in Sources */,
+				00FE47501146335F00D921B0 /* GHTextureManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,7 +378,18 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Steer_Prefix.pch;
+				HEADER_SEARCH_PATHS = "Libraries/ffmpeg/**";
 				INFOPLIST_FILE = "Steer-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavcodec\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavfilter\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavformat\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavutil\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libpostproc\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libswscale\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavdevice\"",
+				);
 				PRODUCT_NAME = Steer;
 				SDKROOT = iphoneos3.0;
 			};
@@ -272,7 +403,18 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Steer_Prefix.pch;
+				HEADER_SEARCH_PATHS = "Libraries/ffmpeg/**";
 				INFOPLIST_FILE = "Steer-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavcodec\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavfilter\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavformat\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavutil\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libpostproc\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libswscale\"",
+					"\"$(SRCROOT)/Libraries/ffmpeg/libavdevice\"",
+				);
 				PRODUCT_NAME = Steer;
 				SDKROOT = iphoneos3.0;
 			};

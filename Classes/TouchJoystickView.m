@@ -14,6 +14,8 @@
 
 - (id)initWithFrame:(CGRect)frame delegate:(id<TouchJoystickViewDelegate>)delegate {
     if (self = [super initWithFrame:frame]) {
+      self.backgroundColor = [UIColor clearColor];
+      self.opaque = NO;
       _delegate = delegate;
       // Initialization code
       _stick = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
