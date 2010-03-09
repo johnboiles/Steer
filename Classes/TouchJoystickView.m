@@ -16,8 +16,10 @@
     if (self = [super initWithFrame:frame]) {
       _delegate = delegate;
       // Initialization code
-      _stick = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
-      _stick.backgroundColor = [[UIColor alloc] initWithRed:0 green:1 blue:0 alpha:0.5];
+      _stick = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"FatSliderThumb.png"]];
+      _stick.backgroundColor = [UIColor clearColor];
+      _stick.alpha = 0.5;
+      //_stick.backgroundColor = [[UIColor alloc] initWithRed:0 green:1 blue:0 alpha:0.5];
       _stick.center = CGPointMake(frame.size.width / 2, frame.size.height / 2);
       [self addSubview:_stick];
       self.clipsToBounds = NO;

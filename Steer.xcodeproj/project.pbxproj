@@ -18,6 +18,7 @@
 		420C75671144FEE4008F46B4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 420C75661144FEE4008F46B4 /* icon.png */; };
 		421539A21146029E0011C7B6 /* LookAndFeel.m in Sources */ = {isa = PBXBuildFile; fileRef = 421539A11146029E0011C7B6 /* LookAndFeel.m */; };
 		421539E911460AC00011C7B6 /* MainConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421539E811460AC00011C7B6 /* MainConfigurationViewController.m */; };
+		42153B0B114633870011C7B6 /* FatSliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 42153B0A114633870011C7B6 /* FatSliderThumb.png */; };
 		429B00D21143A2F0000D1330 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429B00D11143A2F0000D1330 /* ConfigurationViewController.m */; };
 		429B01391143B561000D1330 /* AccelerometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 429B01381143B561000D1330 /* AccelerometerView.m */; };
 		429B01711143BBDF000D1330 /* SharedSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 429B01701143BBDF000D1330 /* SharedSettings.m */; };
@@ -47,6 +48,7 @@
 		421539A11146029E0011C7B6 /* LookAndFeel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookAndFeel.m; sourceTree = "<group>"; };
 		421539E711460AC00011C7B6 /* MainConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainConfigurationViewController.h; sourceTree = "<group>"; };
 		421539E811460AC00011C7B6 /* MainConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainConfigurationViewController.m; sourceTree = "<group>"; };
+		42153B0A114633870011C7B6 /* FatSliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FatSliderThumb.png; sourceTree = "<group>"; };
 		429B00D01143A2F0000D1330 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
 		429B00D11143A2F0000D1330 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
 		429B01371143B561000D1330 /* AccelerometerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerView.h; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				42153B0A114633870011C7B6 /* FatSliderThumb.png */,
 				420C75661144FEE4008F46B4 /* icon.png */,
 				8D1107310486CEB800E47090 /* Steer-Info.plist */,
 			);
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				420C75671144FEE4008F46B4 /* icon.png in Resources */,
+				42153B0B114633870011C7B6 /* FatSliderThumb.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
