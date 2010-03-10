@@ -12,9 +12,7 @@
 #import "MainConfigurationViewController.h"
 #import "SharedSettings.h"
 
-#import "GHGLView.h"
-#import "FFAVFrameQueue.h"
-#import "FFGLDrawable.h"
+#import "FFPlayerView.h"
 
 @implementation SteerAppDelegate
 
@@ -31,23 +29,10 @@
   DualJoystickViewController *dualJoystickViewController = [[DualJoystickViewController alloc] init];
   [_window addSubview:[dualJoystickViewController view]];
   
-  GHGLView *GLView = [[GHGLView alloc] init];
-  GLView.frame = CGRectMake(0, 0, 320, 480);
-
-  //NSString *testURLString = @"http://bridgecam2.halton.gov.uk/mjpg/video.mjpg";  
-  NSString *URLString = @"http://wificar:carwifi@192.168.1.253/nphMotionJpeg?Resolution=320x240&Quality=Motion";
-  NSString *format = @"mjpeg";
-  NSURL *URL = [NSURL URLWithString:URLString];
-  FFAVFrameQueue *frameQueue = [[FFAVFrameQueue alloc] initWithURL:URL format:format];  
-  FFGLDrawable *drawable = [[FFGLDrawable alloc] initWithFrameQueue:frameQueue];
-  [frameQueue release];
-  GLView.drawable = drawable;
-  [drawable release];
-  [GLView setAnimationInterval:(1.0 / 10.0)];  
-  [GLView startAnimation];   
-
-  [_window addSubview:GLView];
-  [_window sendSubviewToBack:GLView];
+  FFPlayerView *playerView = [[FFPlayerView alloc] init];
+  [playerView start];
+  [_window addSubview:playerView];
+  [_window sendSubviewToBack:playerView];
     
   //AccelerometerViewController *accelerometerViewController = [[AccelerometerViewController alloc] init];
   //[_window addSubview:[accelerometerViewController view]];

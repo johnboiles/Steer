@@ -20,7 +20,7 @@
 
 @interface FFPlayer : NSObject {
   AVFormatContext *_formatContext;
-  AVFrame *_frame;
+
   AVFrame *_destFrame;
   
   AVStream *_videoStream;
@@ -43,7 +43,12 @@
 
 - (BOOL)openWithURL:(NSURL *)URL format:(NSString *)format error:(NSError **)error;
 
-- (AVFrame *)readFrame:(NSError **)error;
+// Buffer length in bytess
+- (int)bufferLength;
+
+- (BOOL)readFrame:(AVFrame *)frame error:(NSError **)error;
+
+- (AVFrame *)scaleFrame:(AVFrame *)frame error:(NSError **)error;
 
 - (void)close;
 

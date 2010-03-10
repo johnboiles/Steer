@@ -8,6 +8,7 @@
 
 #import "FFPlayer.h"
 #import "FFDefines.h"
+#import "FFNotifications.h"
 
 static AVPacket gFlushPacket;
 
@@ -52,21 +53,33 @@ struct SwsContext *gScaleContext = NULL;
   AVInputFormat *avformat = NULL;
   if (format) {
     avformat = av_find_input_format([format UTF8String]);
-    if (avformat == NULL) FFSetError(@"Couldn't find specified format", error, 5);
+    if (avformat == NULL) FFSetError(error, 5, @"Couldn't find specified format");
+    else FFDebug(@"Format: %s (flags=%x)", avformat->long_name, avformat->flags);
   }
-  
-  FFDebug(@"Opening: %@", path);
-  if (av_open_input_file(&_formatContext, [path UTF8String], avformat, 0, NULL) != 0) {
-    FFSetError(@"Failed to open file", error, 10);
+
+  FFDisplay(@"Opening: %@", path);
+  int averror = av_open_input_file(&_formatContext, [path UTF8String], avformat, 0, NULL);
+  if (averror != 0) {
+    FFSetError(error, 10, @"Failed to open: %d", averror);
+    FFDisplay(@"Failed to open: %d", averror);
     return NO;
   }
   
-  if (av_find_stream_info(_formatContext) < 0) {
+  _formatContext->flags = AVFMT_FLAG_NONBLOCK;
+  _formatContext->max_analyze_duration = 1 * AV_TIME_BASE;
+  _formatContext->max_delay = 0;
+  _formatContext->preload = 0;
+  FFDebug(@"Format context flags: %x", _formatContext->flags);
+  FFDebug(@"Format max analyze flag: %d", _formatContext->max_analyze_duration);
+  
+  FFDebug(@"Find stream info");
+  averror = av_find_stream_info(_formatContext);
+  if (averror < 0) {
     av_close_input_file(_formatContext);
-    FFSetError(@"Failed to find stream info", error, 20);
+    FFSetError(error, 20, @"Failed to find stream info");
     return NO;
   }
-  
+    
   // Find video stream
   _videoStream = NULL;
   for (int i = 0; i < _formatContext->nb_streams; i++) {
@@ -77,33 +90,26 @@ struct SwsContext *gScaleContext = NULL;
     }
   }
   if (_videoStream == NULL) {
-    FFSetError(@"Couldn't find video stream", error, 30);
+    FFSetError(error, 30, @"Couldn't find video stream");
     return NO;
   }
   
   FFDebug(@"Finding codec");
   AVCodec *codec = avcodec_find_decoder(_videoStream->codec->codec_id);
   if (!codec) {
-    FFSetError(@"Codec not found for video stream", error, 40);
+    FFSetError(error, 40, @"Codec not found for video stream");
     return NO;
   }
   
   if (avcodec_open(_videoStream->codec, codec) < 0) {
-    FFSetError(@"Codec open failed for video stream", error, 41);
+    FFSetError(error, 41, @"Codec open failed for video stream");
     return NO;
   }
-  
-  // Frame decoded from video stream (before conversion)
-  _frame = avcodec_alloc_frame();
-  if (_frame == NULL) {
-    FFSetError(@"Couldn't allocate frame", error, 50);
-    return NO;
-  }  
   
   // Frame after scaling and converting pixel format
   _destFrame = avcodec_alloc_frame();
   if (_destFrame == NULL) {
-    FFSetError(@"Couldn't allocate destination frame", error, 51);
+    FFSetError(error, 51, @"Couldn't allocate destination frame");
     return NO;
   }  
   
@@ -111,58 +117,72 @@ struct SwsContext *gScaleContext = NULL;
   int bytes = avpicture_get_size(_pixelFormat, _width, _height);		
   _videoBuffer = (uint8_t*)av_malloc(bytes * sizeof(uint8_t));
   if (_videoBuffer == NULL) {
-    FFSetError(@"Couldn't allocate video buffer", error, 60);
+    FFSetError(error, 60, @"Couldn't allocate video buffer");
     return NO;
   }
   
   // Assign video buffer to dest frame
   avpicture_fill((AVPicture *)_destFrame, _videoBuffer, _pixelFormat, _width, _height);
 
-  FFDebug(@"Opened");
+  [[NSNotificationCenter defaultCenter] postNotificationName:FFOpenNotification object:nil];
+    
   _open = YES;
+  FFDebug(@"Opened");
   return YES;
 }
 
-- (AVFrame *)readFrame:(NSError **)error {
+- (int)bufferLength {
+  return avpicture_get_size(_pixelFormat, _width, _height);
+}
+
+- (BOOL)readFrame:(AVFrame *)frame error:(NSError **)error {
+  
+  AVPacket packet;
   
   // Read the packet
-  AVPacket packet;
   if (av_read_frame(_formatContext, &packet) < 0) { 
-    FFSetError(@"Failed to read frame", error, 100);
-    return NULL;
+    FFSetError(error, 100, @"Failed to read frame");
+    return NO;
   }
-    
-  //FFDebug(@"Packet size: %d", packet.size);
-    
+  
+  //FFDebug(@"Packet size: %d", packet->size);
+  
   // Ignore packet if not part of our video stream
   if (packet.stream_index != _videoStream->index) {
     FFDebug(@"Packet not part of video stream");
-    return NULL;
+    return NO;
   }
-    
+  
   // If flush packet, flush and continue
   if (packet.data == gFlushPacket.data) {
     FFDebug(@"avcodec_flush_buffers");
     avcodec_flush_buffers(_videoStream->codec);
-    return NULL;
+    return NO;
   }
-    
+  
   // Decode the frame (from the packet)
   int gotFrame = 0;
-  int bytesDecoded = avcodec_decode_video2(_videoStream->codec, _frame, &gotFrame, &packet);
-  //FFDebug(@"Decoded %d", bytesDecoded);    
+  int bytesDecoded = avcodec_decode_video2(_videoStream->codec, frame, &gotFrame, &packet);
+  //FFDebug(@"Decoded %d", bytesDecoded);
+  
   av_free_packet(&packet);
   
   if (bytesDecoded < 0) {
-    FFSetError(@"Error while decoding frame", error, 110);
-    return NULL;
+    FFSetError(error, 110, @"Error while decoding frame");
+    return NO;
   }
   
   if (!gotFrame) {
-    FFSetError(@"Incomplete decoded frame", error, 120);
-    return NULL;
-  }    
-  
+    FFSetError(error, 120, @"Incomplete decoded frame");
+    return NO;
+  }  
+
+  return YES;
+}
+
+- (AVFrame *)scaleFrame:(AVFrame *)frame error:(NSError **)error {
+    
+      
   // Scale the frame into destFrame
   int videoWidth = _videoStream->codec->coded_width;
   int videoHeight = _videoStream->codec->coded_height;
@@ -172,25 +192,23 @@ struct SwsContext *gScaleContext = NULL;
                                        SWS_BICUBIC, NULL, NULL, NULL);
   
   if (gScaleContext == NULL) {
-    FFSetError(@"Failed to read frame", error, 100);
+    FFSetError(error, 100, @"Failed to read frame");
     return NULL;
   }
   
-  sws_scale(gScaleContext, _frame->data, _frame->linesize, 0,
+  sws_scale(gScaleContext, frame->data, frame->linesize, 0,
             _height, _destFrame->data, _destFrame->linesize);
       
   return _destFrame;
 }
 
 - (void)close {
-  if (_frame) av_free(_frame);
-  _frame = NULL;
-  if (_formatContext) av_close_input_file(_formatContext);
+  if (_formatContext != NULL) av_close_input_file(_formatContext);
   _formatContext = NULL;
-  if (_videoBuffer) av_free(_videoBuffer);
-  _videoBuffer = NULL;  
-  if (_destFrame) av_free(_destFrame);
+  if (_destFrame != NULL) av_free(_destFrame);
   _destFrame = NULL;
+  if (_videoBuffer != NULL) av_free(_videoBuffer);
+  _videoBuffer = NULL;  
   _open = NO;
 }
 

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0024D28B1147964D00D0B56C /* FFPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024D28A1147964D00D0B56C /* FFPlayerView.m */; };
+		0024D2A31147984E00D0B56C /* FFNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 0024D2A21147984E00D0B56C /* FFNotifications.m */; };
+		00CABD5B114746A500308E0F /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CABD56114746A500308E0F /* x.png */; };
+		00CABD5C114746A500308E0F /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CABD57114746A500308E0F /* icon.png */; };
+		00CABD5D114746A500308E0F /* FatSliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CABD58114746A500308E0F /* FatSliderThumb.png */; };
+		00CABD5E114746A500308E0F /* FatSliderLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CABD59114746A500308E0F /* FatSliderLeft.png */; };
 		00FE47481146335F00D921B0 /* FFAVFrameQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47311146335F00D921B0 /* FFAVFrameQueue.m */; };
 		00FE47491146335F00D921B0 /* FFGLDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47341146335F00D921B0 /* FFGLDrawable.m */; };
 		00FE474A1146335F00D921B0 /* FFGLTestDrawable.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FE47361146335F00D921B0 /* FFGLTestDrawable.m */; };
@@ -34,11 +40,8 @@
 		420C746B1144B936008F46B4 /* ControlViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 420C746A1144B936008F46B4 /* ControlViewController.m */; };
 		420C74AF1144DE71008F46B4 /* CarControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 420C74AE1144DE71008F46B4 /* CarControl.m */; };
 		420C75391144F065008F46B4 /* AccelerometerConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 420C75381144F065008F46B4 /* AccelerometerConfigurationViewController.m */; };
-		420C75671144FEE4008F46B4 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 420C75661144FEE4008F46B4 /* icon.png */; };
 		421539A21146029E0011C7B6 /* LookAndFeel.m in Sources */ = {isa = PBXBuildFile; fileRef = 421539A11146029E0011C7B6 /* LookAndFeel.m */; };
 		421539E911460AC00011C7B6 /* MainConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 421539E811460AC00011C7B6 /* MainConfigurationViewController.m */; };
-		42153B0B114633870011C7B6 /* FatSliderThumb.png in Resources */ = {isa = PBXBuildFile; fileRef = 42153B0A114633870011C7B6 /* FatSliderThumb.png */; };
-		42153B201146423B0011C7B6 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = 42153B1F1146423B0011C7B6 /* x.png */; };
 		429B00D21143A2F0000D1330 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 429B00D11143A2F0000D1330 /* ConfigurationViewController.m */; };
 		429B01391143B561000D1330 /* AccelerometerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 429B01381143B561000D1330 /* AccelerometerView.m */; };
 		429B01711143BBDF000D1330 /* SharedSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 429B01701143BBDF000D1330 /* SharedSettings.m */; };
@@ -49,6 +52,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0024D2891147964D00D0B56C /* FFPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFPlayerView.h; sourceTree = "<group>"; };
+		0024D28A1147964D00D0B56C /* FFPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFPlayerView.m; sourceTree = "<group>"; };
+		0024D2A11147984E00D0B56C /* FFNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFNotifications.h; sourceTree = "<group>"; };
+		0024D2A21147984E00D0B56C /* FFNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFNotifications.m; sourceTree = "<group>"; };
+		00CABD56114746A500308E0F /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
+		00CABD57114746A500308E0F /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		00CABD58114746A500308E0F /* FatSliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FatSliderThumb.png; sourceTree = "<group>"; };
+		00CABD59114746A500308E0F /* FatSliderLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FatSliderLeft.png; sourceTree = "<group>"; };
+		00CABD6A114746B400308E0F /* Steer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Steer-Info.plist"; sourceTree = "<group>"; };
 		00FE47301146335F00D921B0 /* FFAVFrameQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFAVFrameQueue.h; sourceTree = "<group>"; };
 		00FE47311146335F00D921B0 /* FFAVFrameQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFAVFrameQueue.m; sourceTree = "<group>"; };
 		00FE47321146335F00D921B0 /* FFDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFDefines.h; sourceTree = "<group>"; };
@@ -96,13 +108,10 @@
 		420C74AE1144DE71008F46B4 /* CarControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CarControl.m; sourceTree = "<group>"; };
 		420C75371144F065008F46B4 /* AccelerometerConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerConfigurationViewController.h; sourceTree = "<group>"; };
 		420C75381144F065008F46B4 /* AccelerometerConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerConfigurationViewController.m; sourceTree = "<group>"; };
-		420C75661144FEE4008F46B4 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		421539A01146029E0011C7B6 /* LookAndFeel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LookAndFeel.h; sourceTree = "<group>"; };
 		421539A11146029E0011C7B6 /* LookAndFeel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LookAndFeel.m; sourceTree = "<group>"; };
 		421539E711460AC00011C7B6 /* MainConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainConfigurationViewController.h; sourceTree = "<group>"; };
 		421539E811460AC00011C7B6 /* MainConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainConfigurationViewController.m; sourceTree = "<group>"; };
-		42153B0A114633870011C7B6 /* FatSliderThumb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FatSliderThumb.png; sourceTree = "<group>"; };
-		42153B1F1146423B0011C7B6 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		429B00D01143A2F0000D1330 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
 		429B00D11143A2F0000D1330 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
 		429B01371143B561000D1330 /* AccelerometerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerView.h; sourceTree = "<group>"; };
@@ -117,7 +126,6 @@
 		42A21E681143404600FDE34A /* SendUDP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SendUDP.h; path = Classes/SendUDP.h; sourceTree = "<group>"; };
 		42A21F0D11435E6D00FDE34A /* AccelerometerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccelerometerViewController.h; sourceTree = "<group>"; };
 		42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccelerometerViewController.m; sourceTree = "<group>"; };
-		8D1107310486CEB800E47090 /* Steer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Steer-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,7 @@
 		00FE472F1146335F00D921B0 /* FFMPEG */ = {
 			isa = PBXGroup;
 			children = (
+				00FE473B1146335F00D921B0 /* OpenGL */,
 				00FE47301146335F00D921B0 /* FFAVFrameQueue.h */,
 				00FE47311146335F00D921B0 /* FFAVFrameQueue.m */,
 				00FE47321146335F00D921B0 /* FFDefines.h */,
@@ -158,7 +167,10 @@
 				00FE47381146335F00D921B0 /* FFMPEGAppDelegate.m */,
 				00FE47391146335F00D921B0 /* FFPlayer.h */,
 				00FE473A1146335F00D921B0 /* FFPlayer.m */,
-				00FE473B1146335F00D921B0 /* OpenGL */,
+				0024D2891147964D00D0B56C /* FFPlayerView.h */,
+				0024D28A1147964D00D0B56C /* FFPlayerView.m */,
+				0024D2A11147984E00D0B56C /* FFNotifications.h */,
+				0024D2A21147984E00D0B56C /* FFNotifications.m */,
 			);
 			path = FFMPEG;
 			sourceTree = "<group>";
@@ -230,6 +242,7 @@
 		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				00CABD6A114746B400308E0F /* Steer-Info.plist */,
 				42A21E671143404600FDE34A /* SendUDP.c */,
 				42A21E681143404600FDE34A /* SendUDP.h */,
 				32CA4F630368D1EE00C91783 /* Steer_Prefix.pch */,
@@ -241,12 +254,12 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				42153B1F1146423B0011C7B6 /* x.png */,
-				42153B0A114633870011C7B6 /* FatSliderThumb.png */,
-				420C75661144FEE4008F46B4 /* icon.png */,
-				8D1107310486CEB800E47090 /* Steer-Info.plist */,
+				00CABD56114746A500308E0F /* x.png */,
+				00CABD57114746A500308E0F /* icon.png */,
+				00CABD58114746A500308E0F /* FatSliderThumb.png */,
+				00CABD59114746A500308E0F /* FatSliderLeft.png */,
 			);
-			name = Resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
@@ -334,9 +347,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				420C75671144FEE4008F46B4 /* icon.png in Resources */,
-				42153B0B114633870011C7B6 /* FatSliderThumb.png in Resources */,
-				42153B201146423B0011C7B6 /* x.png in Resources */,
+				00CABD5B114746A500308E0F /* x.png in Resources */,
+				00CABD5C114746A500308E0F /* icon.png in Resources */,
+				00CABD5D114746A500308E0F /* FatSliderThumb.png in Resources */,
+				00CABD5E114746A500308E0F /* FatSliderLeft.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +384,8 @@
 				00FE474E1146335F00D921B0 /* GHGLView.m in Sources */,
 				00FE474F1146335F00D921B0 /* GHGLViewController.m in Sources */,
 				00FE47501146335F00D921B0 /* GHTextureManager.m in Sources */,
+				0024D28B1147964D00D0B56C /* FFPlayerView.m in Sources */,
+				0024D2A31147984E00D0B56C /* FFNotifications.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

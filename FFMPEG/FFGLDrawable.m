@@ -97,11 +97,15 @@
 }
 
 - (BOOL)drawView:(CGRect)frame inView:(GHGLView *)view {
-  
+
+  /*!
   AVFrame *avframe = [_frameQueue next];
   if (avframe == NULL) {
     return NO;
   }
+   */
+  uint8_t *nextData = [_frameQueue nextData];
+  if (nextData == NULL) return NO;
     
   glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);	
 	glLoadIdentity();
@@ -113,10 +117,10 @@
   glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
   
   if (!_textureLoaded) {
-    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, _frameQueue.player.width, _frameQueue.player.height, 0, GL_RGB, GL_UNSIGNED_BYTE, avframe->data[0]);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, _frameQueue.player.width, _frameQueue.player.height, 0, GL_RGB, GL_UNSIGNED_BYTE, nextData);
   } else {
     glTexSubImage2D(GL_TEXTURE_2D, 0, 0, 0, _frameQueue.player.width, _frameQueue.player.height,
-                    GL_RGB, GL_UNSIGNED_BYTE, avframe->data[0]);
+                    GL_RGB, GL_UNSIGNED_BYTE, nextData);
   }
   
   GLenum GLError = glGetError();
