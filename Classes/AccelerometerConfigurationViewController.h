@@ -14,6 +14,7 @@
   UISlider *_steeringDeadZoneSlider;
   UISlider *_powerDeadZoneSlider;
   UISlider *_frequencySlider;
+  UISlider *_filterSlider;
 }
 
 @end

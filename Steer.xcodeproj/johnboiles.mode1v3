@@ -278,8 +278,7 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>8</integer>
-									<integer>4</integer>
+									<integer>19</integer>
 									<integer>1</integer>
 									<integer>0</integer>
 								</array>
@@ -304,7 +303,7 @@
 							<real>261</real>
 						</array>
 						<key>RubberWindowFrame</key>
-						<string>438 78 1282 866 0 0 1920 1058 </string>
+						<string>329 175 1282 866 0 0 1920 1058 </string>
 					</dict>
 					<key>Module</key>
 					<string>PBXSmartGroupTreeModule</string>
@@ -322,7 +321,7 @@
 								<key>PBXProjectModuleGUID</key>
 								<string>1CE0B20306471E060097A5F4</string>
 								<key>PBXProjectModuleLabel</key>
-								<string>AccelerometerView.m</string>
+								<string>SteerAppDelegate.m</string>
 								<key>PBXSplitModuleInNavigatorKey</key>
 								<dict>
 									<key>Split0</key>
@@ -330,11 +329,11 @@
 										<key>PBXProjectModuleGUID</key>
 										<string>1CE0B20406471E060097A5F4</string>
 										<key>PBXProjectModuleLabel</key>
-										<string>AccelerometerView.m</string>
+										<string>SteerAppDelegate.m</string>
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>428D455511478B06001E7BCE</string>
+										<string>428D455F114791E2001E7BCE</string>
 										<key>history</key>
 										<array>
 											<string>42A21DB51143248400FDE34A</string>
@@ -359,15 +358,12 @@
 											<string>420C7595114505BD008F46B4</string>
 											<string>420C7596114505BD008F46B4</string>
 											<string>420C7597114505BD008F46B4</string>
-											<string>428D451D1147859F001E7BCE</string>
 											<string>428D451E1147859F001E7BCE</string>
 											<string>428D451F1147859F001E7BCE</string>
 											<string>428D45211147859F001E7BCE</string>
 											<string>428D45231147859F001E7BCE</string>
-											<string>428D45241147859F001E7BCE</string>
 											<string>428D452B1147862D001E7BCE</string>
 											<string>428D452C1147862D001E7BCE</string>
-											<string>428D454B11478B06001E7BCE</string>
 											<string>428D454C11478B06001E7BCE</string>
 											<string>428D454D11478B06001E7BCE</string>
 											<string>428D454E11478B06001E7BCE</string>
@@ -376,7 +372,10 @@
 											<string>428D455111478B06001E7BCE</string>
 											<string>428D455211478B06001E7BCE</string>
 											<string>428D455311478B06001E7BCE</string>
-											<string>428D455411478B06001E7BCE</string>
+											<string>428D455B114791E2001E7BCE</string>
+											<string>428D455C114791E2001E7BCE</string>
+											<string>428D455D114791E2001E7BCE</string>
+											<string>428D455E114791E2001E7BCE</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -390,7 +389,7 @@
 								<key>Frame</key>
 								<string>{{0, 0}, {999, 625}}</string>
 								<key>RubberWindowFrame</key>
-								<string>438 78 1282 866 0 0 1920 1058 </string>
+								<string>329 175 1282 866 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
@@ -410,7 +409,7 @@
 								<key>Frame</key>
 								<string>{{0, 630}, {999, 195}}</string>
 								<key>RubberWindowFrame</key>
-								<string>438 78 1282 866 0 0 1920 1058 </string>
+								<string>329 175 1282 866 0 0 1920 1058 </string>
 							</dict>
 							<key>Module</key>
 							<string>XCDetailModule</string>
@@ -574,7 +573,7 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>428D455611478B06001E7BCE</string>
+		<string>428D4560114791E2001E7BCE</string>
 		<string>428D4543114789C7001E7BCE</string>
 		<string>428D453E11478925001E7BCE</string>
 		<string>1C78EAAD065D492600B07095</string>
@@ -583,7 +582,7 @@
 		<string>/Users/johnboiles/Programming/iPhone/Wifi Car/er-a/Steer.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
-	<string>438 78 1282 866 0 0 1920 1058 </string>
+	<string>329 175 1282 866 0 0 1920 1058 </string>
 	<key>WindowToolsV3</key>
 	<array>
 		<dict>

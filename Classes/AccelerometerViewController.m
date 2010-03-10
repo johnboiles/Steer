@@ -21,7 +21,7 @@ tiltAngleMax=_tiltAngleMax, rollAngleMax=_rollAngleMax;
 - (id)init {
   if (self = [super init]) {
     // Set some defaults that the user can override if necessary
-    _filterConstant = 0.7;
+    _filterConstant = [[SharedSettings sharedManager] accelerometerFilter];
     // Configure and start the accelerometer
     _firstAccelerometerSample = YES;
     _rollAngleMax = 1.1;

@@ -10,8 +10,8 @@
 	00FE47311146335F00D921B0 /* FFAVFrameQueue.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {938, 928}}";
-			sepNavSelRange = "{537, 0}";
-			sepNavVisRange = "{370, 847}";
+			sepNavSelRange = "{753, 0}";
+			sepNavVisRange = "{385, 832}";
 		};
 	};
 	00FE47341146335F00D921B0 /* FFGLDrawable.m */ = {
@@ -30,9 +30,9 @@
 	};
 	00FE473A1146335F00D921B0 /* FFPlayer.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {938, 3168}}";
-			sepNavSelRange = "{3299, 13}";
-			sepNavVisRange = "{4188, 1104}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 3184}}";
+			sepNavSelRange = "{807, 85}";
+			sepNavVisRange = "{442, 970}";
 		};
 	};
 	1D3623240D0F684500981E51 /* SteerAppDelegate.h */ = {
@@ -45,8 +45,8 @@
 	1D3623250D0F684500981E51 /* SteerAppDelegate.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1013, 1216}}";
-			sepNavSelRange = "{1347, 0}";
-			sepNavVisRange = "{916, 1649}";
+			sepNavSelRange = "{1014, 0}";
+			sepNavVisRange = "{915, 1648}";
 		};
 	};
 	1D6058900D05DD3D006BFB54 /* Steer */ = {
@@ -427,6 +427,11 @@
 			428D455311478B06001E7BCE /* PBXTextBookmark */ = 428D455311478B06001E7BCE /* PBXTextBookmark */;
 			428D455411478B06001E7BCE /* PBXTextBookmark */ = 428D455411478B06001E7BCE /* PBXTextBookmark */;
 			428D455511478B06001E7BCE /* PBXTextBookmark */ = 428D455511478B06001E7BCE /* PBXTextBookmark */;
+			428D455B114791E2001E7BCE /* PBXTextBookmark */ = 428D455B114791E2001E7BCE /* PBXTextBookmark */;
+			428D455C114791E2001E7BCE /* PBXTextBookmark */ = 428D455C114791E2001E7BCE /* PBXTextBookmark */;
+			428D455D114791E2001E7BCE /* PBXTextBookmark */ = 428D455D114791E2001E7BCE /* PBXTextBookmark */;
+			428D455E114791E2001E7BCE /* PBXTextBookmark */ = 428D455E114791E2001E7BCE /* PBXTextBookmark */;
+			428D455F114791E2001E7BCE /* PBXTextBookmark */ = 428D455F114791E2001E7BCE /* PBXTextBookmark */;
 			429B010B1143B1A6000D1330 = 429B010B1143B1A6000D1330 /* PBXTextBookmark */;
 			429B010D1143B1A6000D1330 = 429B010D1143B1A6000D1330 /* PBXTextBookmark */;
 			429B015D1143B973000D1330 = 429B015D1143B973000D1330 /* PBXTextBookmark */;
@@ -493,7 +498,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 18";
 		rLen = 0;
-		rLoc = 554;
+		rLoc = 597;
 		rType = 0;
 		vrLen = 1069;
 		vrLoc = 0;
@@ -503,7 +508,7 @@
 		fRef = 429B016F1143BBDF000D1330 /* SharedSettings.h */;
 		name = "SharedProperties.h: 31";
 		rLen = 0;
-		rLoc = 837;
+		rLoc = 832;
 		rType = 0;
 		vrLen = 846;
 		vrLoc = 0;
@@ -563,7 +568,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 18";
 		rLen = 0;
-		rLoc = 554;
+		rLoc = 597;
 		rType = 0;
 		vrLen = 1471;
 		vrLoc = 36;
@@ -573,7 +578,7 @@
 		fRef = 429B016F1143BBDF000D1330 /* SharedSettings.h */;
 		name = "SharedProperties.h: 31";
 		rLen = 0;
-		rLoc = 837;
+		rLoc = 832;
 		rType = 0;
 		vrLen = 846;
 		vrLoc = 0;
@@ -603,7 +608,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 18";
 		rLen = 0;
-		rLoc = 554;
+		rLoc = 597;
 		rType = 0;
 		vrLen = 2135;
 		vrLoc = 813;
@@ -712,7 +717,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = Steer;
-		modificationTime = 289901331.736568;
+		modificationTime = 289903902.247997;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -760,7 +765,7 @@
 		ignoreCount = 0;
 		lineNumber = 36;
 		location = Steer;
-		modificationTime = 289901331.736581;
+		modificationTime = 289903902.248013;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -778,7 +783,7 @@
 		ignoreCount = 0;
 		lineNumber = 43;
 		location = Steer;
-		modificationTime = 289901331.736598;
+		modificationTime = 289903902.248031;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -816,7 +821,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = Steer;
-		modificationTime = 289901331.736612;
+		modificationTime = 289903902.248048;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -834,7 +839,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = Steer;
-		modificationTime = 289901331.736624;
+		modificationTime = 289903902.248066;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -922,7 +927,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = Steer;
-		modificationTime = 289901331.736639;
+		modificationTime = 289903902.248085;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -940,7 +945,7 @@
 		ignoreCount = 0;
 		lineNumber = 32;
 		location = Steer;
-		modificationTime = 289901331.736655;
+		modificationTime = 289903902.248108;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -958,7 +963,7 @@
 		ignoreCount = 0;
 		lineNumber = 19;
 		location = Steer;
-		modificationTime = 289901331.736675;
+		modificationTime = 289903902.248125;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -997,7 +1002,7 @@
 		fRef = 1D3623250D0F684500981E51 /* SteerAppDelegate.m */;
 		name = "SteerAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1077;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 317;
@@ -1007,7 +1012,7 @@
 		fRef = 1D3623250D0F684500981E51 /* SteerAppDelegate.m */;
 		name = "SteerAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1077;
 		rType = 0;
 		vrLen = 1084;
 		vrLoc = 317;
@@ -1053,7 +1058,7 @@
 		ignoreCount = 0;
 		lineNumber = 44;
 		location = Steer;
-		modificationTime = 289901332.470558;
+		modificationTime = 289903902.777892;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1072,7 +1077,7 @@
 		fRef = 1D3623250D0F684500981E51 /* SteerAppDelegate.m */;
 		name = "SteerAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1077;
 		rType = 0;
 		vrLen = 1113;
 		vrLoc = 288;
@@ -1082,7 +1087,7 @@
 		fRef = 1D3623250D0F684500981E51 /* SteerAppDelegate.m */;
 		name = "SteerAppDelegate.m: 33";
 		rLen = 0;
-		rLoc = 1079;
+		rLoc = 1077;
 		rType = 0;
 		vrLen = 1153;
 		vrLoc = 248;
@@ -1101,7 +1106,7 @@
 		ignoreCount = 0;
 		lineNumber = 41;
 		location = Steer;
-		modificationTime = 289901332.507068;
+		modificationTime = 289903902.828388;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -1110,7 +1115,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 18";
 		rLen = 0;
-		rLoc = 554;
+		rLoc = 597;
 		rType = 0;
 		vrLen = 2088;
 		vrLoc = 813;
@@ -1164,9 +1169,9 @@
 	};
 	420C746A1144B936008F46B4 /* ControlViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 624}}";
-			sepNavSelRange = "{316, 0}";
-			sepNavVisRange = "{179, 498}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 704}}";
+			sepNavSelRange = "{726, 4}";
+			sepNavVisRange = "{145, 865}";
 		};
 	};
 	420C74861144BD5D008F46B4 /* PBXTextBookmark */ = {
@@ -1232,7 +1237,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 18";
 		rLen = 0;
-		rLoc = 554;
+		rLoc = 597;
 		rType = 0;
 		vrLen = 2088;
 		vrLoc = 813;
@@ -1262,9 +1267,9 @@
 		fRef = 420C746A1144B936008F46B4 /* ControlViewController.m */;
 		name = "ControlViewController.m: 44";
 		rLen = 58;
-		rLoc = 810;
+		rLoc = 832;
 		rType = 0;
-		vrLen = 1081;
+		vrLen = 758;
 		vrLoc = 220;
 	};
 	420C74921144BD6C008F46B4 /* PBXTextBookmark */ = {
@@ -1282,7 +1287,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 86";
 		rLen = 42;
-		rLoc = 3503;
+		rLoc = 3552;
 		rType = 0;
 		vrLen = 999;
 		vrLoc = 2346;
@@ -1312,7 +1317,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 69";
 		rLen = 0;
-		rLoc = 2273;
+		rLoc = 2123;
 		rType = 0;
 		vrLen = 1190;
 		vrLoc = 1111;
@@ -1419,9 +1424,9 @@
 	};
 	420C74AE1144DE71008F46B4 /* CarControl.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1091, 1440}}";
-			sepNavSelRange = "{206, 0}";
-			sepNavVisRange = "{0, 698}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 1376}}";
+			sepNavSelRange = "{1984, 15}";
+			sepNavVisRange = "{1322, 784}";
 		};
 	};
 	420C74B01144DED7008F46B4 /* PBXTextBookmark */ = {
@@ -1479,9 +1484,9 @@
 		fRef = 420C746A1144B936008F46B4 /* ControlViewController.m */;
 		name = "ControlViewController.m: 44";
 		rLen = 0;
-		rLoc = 828;
+		rLoc = 850;
 		rType = 0;
-		vrLen = 738;
+		vrLen = 380;
 		vrLoc = 598;
 	};
 	420C74B61144DED7008F46B4 /* PBXTextBookmark */ = {
@@ -1529,9 +1534,9 @@
 		fRef = 420C746A1144B936008F46B4 /* ControlViewController.m */;
 		name = "ControlViewController.m: 45";
 		rLen = 0;
-		rLoc = 869;
+		rLoc = 891;
 		rType = 0;
-		vrLen = 731;
+		vrLen = 380;
 		vrLoc = 598;
 	};
 	420C74BD1144E04E008F46B4 /* PBXTextBookmark */ = {
@@ -1539,7 +1544,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 68";
 		rLen = 0;
-		rLoc = 2169;
+		rLoc = 2019;
 		rType = 0;
 		vrLen = 899;
 		vrLoc = 1420;
@@ -1619,7 +1624,7 @@
 		rLen = 0;
 		rLoc = 456;
 		rType = 0;
-		vrLen = 1019;
+		vrLen = 730;
 		vrLoc = 248;
 	};
 	420C74DE1144E3CE008F46B4 /* PBXTextBookmark */ = {
@@ -1657,7 +1662,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 82";
 		rLen = 0;
-		rLoc = 3332;
+		rLoc = 3381;
 		rType = 0;
 		vrLen = 1048;
 		vrLoc = 1576;
@@ -1667,7 +1672,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 47";
 		rLen = 0;
-		rLoc = 1668;
+		rLoc = 1518;
 		rType = 0;
 		vrLen = 1093;
 		vrLoc = 520;
@@ -1687,7 +1692,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 65";
 		rLen = 0;
-		rLoc = 2442;
+		rLoc = 2266;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 1077;
@@ -1697,7 +1702,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 64";
 		rLen = 0;
-		rLoc = 2400;
+		rLoc = 2250;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 1077;
@@ -1716,7 +1721,7 @@
 		ignoreCount = 0;
 		lineNumber = 38;
 		location = Steer;
-		modificationTime = 289901331.736726;
+		modificationTime = 289903902.248182;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -1725,7 +1730,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 64";
 		rLen = 0;
-		rLoc = 2400;
+		rLoc = 2250;
 		rType = 0;
 		vrLen = 1133;
 		vrLoc = 1077;
@@ -1785,7 +1790,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 18";
 		rLen = 0;
-		rLoc = 554;
+		rLoc = 597;
 		rType = 0;
 		vrLen = 1902;
 		vrLoc = 813;
@@ -1855,7 +1860,7 @@
 		fRef = 420C746A1144B936008F46B4 /* ControlViewController.m */;
 		name = "ControlViewController.m: 35";
 		rLen = 0;
-		rLoc = 976;
+		rLoc = 998;
 		rType = 0;
 		vrLen = 837;
 		vrLoc = 41;
@@ -1875,7 +1880,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 36";
 		rLen = 0;
-		rLoc = 1277;
+		rLoc = 1185;
 		rType = 0;
 		vrLen = 1124;
 		vrLoc = 560;
@@ -1895,7 +1900,7 @@
 		fRef = 420C746A1144B936008F46B4 /* ControlViewController.m */;
 		name = "ControlViewController.m: 29";
 		rLen = 0;
-		rLoc = 800;
+		rLoc = 822;
 		rType = 0;
 		vrLen = 877;
 		vrLoc = 82;
@@ -1905,7 +1910,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 82";
 		rLen = 0;
-		rLoc = 3332;
+		rLoc = 3381;
 		rType = 0;
 		vrLen = 1119;
 		vrLoc = 1677;
@@ -1915,7 +1920,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 52";
 		rLen = 0;
-		rLoc = 1482;
+		rLoc = 1332;
 		rType = 0;
 		vrLen = 1020;
 		vrLoc = 443;
@@ -2067,7 +2072,7 @@
 		rLen = 0;
 		rLoc = 673;
 		rType = 0;
-		vrLen = 837;
+		vrLen = 834;
 		vrLoc = 144;
 	};
 	420C75271144E9F9008F46B4 /* PBXTextBookmark */ = {
@@ -2077,7 +2082,7 @@
 		rLen = 0;
 		rLoc = 685;
 		rType = 0;
-		vrLen = 838;
+		vrLen = 834;
 		vrLoc = 144;
 	};
 	420C752A1144EA72008F46B4 /* PBXTextBookmark */ = {
@@ -2105,7 +2110,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 47";
 		rLen = 0;
-		rLoc = 1707;
+		rLoc = 1756;
 		rType = 0;
 		vrLen = 1191;
 		vrLoc = 715;
@@ -2115,7 +2120,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 45";
 		rLen = 0;
-		rLoc = 1470;
+		rLoc = 1519;
 		rType = 0;
 		vrLen = 1198;
 		vrLoc = 787;
@@ -2125,7 +2130,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 45";
 		rLen = 0;
-		rLoc = 1470;
+		rLoc = 1519;
 		rType = 0;
 		vrLen = 1198;
 		vrLoc = 787;
@@ -2149,16 +2154,16 @@
 	};
 	420C75371144F065008F46B4 /* AccelerometerConfigurationViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {938, 593}}";
-			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{0, 475}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 570}}";
+			sepNavSelRange = "{493, 0}";
+			sepNavVisRange = "{0, 502}";
 		};
 	};
 	420C75381144F065008F46B4 /* AccelerometerConfigurationViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 2048}}";
-			sepNavSelRange = "{1416, 0}";
-			sepNavVisRange = "{326, 1692}";
+			sepNavIntBoundsRect = "{{0, 0}, {1006, 2224}}";
+			sepNavSelRange = "{4624, 0}";
+			sepNavVisRange = "{3749, 1590}";
 		};
 	};
 	420C753A1144F0E6008F46B4 /* PBXTextBookmark */ = {
@@ -2178,7 +2183,7 @@
 		rLen = 0;
 		rLoc = 45;
 		rType = 0;
-		vrLen = 837;
+		vrLen = 833;
 		vrLoc = 145;
 	};
 	420C753C1144F0E6008F46B4 /* PBXTextBookmark */ = {
@@ -2186,7 +2191,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 18";
 		rLen = 0;
-		rLoc = 554;
+		rLoc = 597;
 		rType = 0;
 		vrLen = 1988;
 		vrLoc = 794;
@@ -2236,7 +2241,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 53";
 		rLen = 0;
-		rLoc = 1675;
+		rLoc = 1525;
 		rType = 0;
 		vrLen = 1033;
 		vrLoc = 397;
@@ -2276,7 +2281,7 @@
 		fRef = 420C75381144F065008F46B4 /* AccelerometerConfigurationViewController.m */;
 		name = "AccelerometerConfigurationViewController.m: 54";
 		rLen = 0;
-		rLoc = 1416;
+		rLoc = 1530;
 		rType = 0;
 		vrLen = 795;
 		vrLoc = 653;
@@ -2286,7 +2291,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 49";
 		rLen = 0;
-		rLoc = 1706;
+		rLoc = 1755;
 		rType = 0;
 		vrLen = 1356;
 		vrLoc = 1099;
@@ -2326,7 +2331,7 @@
 		fRef = 429B016F1143BBDF000D1330 /* SharedSettings.h */;
 		name = "SharedProperties.h: 31";
 		rLen = 0;
-		rLoc = 837;
+		rLoc = 832;
 		rType = 0;
 		vrLen = 846;
 		vrLoc = 0;
@@ -2366,7 +2371,7 @@
 		fRef = 429B016F1143BBDF000D1330 /* SharedSettings.h */;
 		name = "SharedProperties.h: 13";
 		rLen = 1;
-		rLoc = 240;
+		rLoc = 204;
 		rType = 0;
 		vrLen = 925;
 		vrLoc = 0;
@@ -2376,7 +2381,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 41";
 		rLen = 0;
-		rLoc = 1580;
+		rLoc = 1623;
 		rType = 0;
 		vrLen = 1482;
 		vrLoc = 205;
@@ -2386,7 +2391,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 61";
 		rLen = 0;
-		rLoc = 2626;
+		rLoc = 2789;
 		rType = 0;
 		vrLen = 1884;
 		vrLoc = 1349;
@@ -2426,9 +2431,9 @@
 		fRef = 420C746A1144B936008F46B4 /* ControlViewController.m */;
 		name = "ControlViewController.m: 31";
 		rLen = 0;
-		rLoc = 804;
+		rLoc = 826;
 		rType = 0;
-		vrLen = 735;
+		vrLen = 731;
 		vrLoc = 247;
 	};
 	420C755A1144FB35008F46B4 /* PBXTextBookmark */ = {
@@ -2444,7 +2449,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 60";
 		rLen = 0;
-		rLoc = 2120;
+		rLoc = 2169;
 		rType = 0;
 		vrLen = 1108;
 		vrLoc = 1808;
@@ -2454,7 +2459,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 83";
 		rLen = 0;
-		rLoc = 4030;
+		rLoc = 4344;
 		rType = 0;
 		vrLen = 978;
 		vrLoc = 0;
@@ -2464,7 +2469,7 @@
 		fRef = 429B016F1143BBDF000D1330 /* SharedSettings.h */;
 		name = "SharedProperties.h: 22";
 		rLen = 0;
-		rLoc = 455;
+		rLoc = 450;
 		rType = 0;
 		vrLen = 903;
 		vrLoc = 26;
@@ -2484,7 +2489,7 @@
 		fRef = 420C75381144F065008F46B4 /* AccelerometerConfigurationViewController.m */;
 		name = "AccelerometerConfigurationViewController.m: 54";
 		rLen = 0;
-		rLoc = 1416;
+		rLoc = 1530;
 		rType = 0;
 		vrLen = 796;
 		vrLoc = 652;
@@ -2524,7 +2529,7 @@
 		fRef = 420C75381144F065008F46B4 /* AccelerometerConfigurationViewController.m */;
 		name = "AccelerometerConfigurationViewController.m: 54";
 		rLen = 0;
-		rLoc = 1416;
+		rLoc = 1530;
 		rType = 0;
 		vrLen = 798;
 		vrLoc = 650;
@@ -2566,7 +2571,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 56";
 		rLen = 0;
-		rLoc = 2089;
+		rLoc = 2138;
 		rType = 0;
 		vrLen = 1363;
 		vrLoc = 1099;
@@ -2645,7 +2650,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = Steer;
-		modificationTime = 289901331.73674;
+		modificationTime = 289903902.248205;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -2663,7 +2668,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = Steer;
-		modificationTime = 289901331.736764;
+		modificationTime = 289903902.248223;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -2702,7 +2707,7 @@
 		fRef = 42A21E261143331C00FDE34A /* DualJoystickViewController.m */;
 		name = "DualJoystickViewController.m: 53";
 		rLen = 0;
-		rLoc = 1675;
+		rLoc = 1525;
 		rType = 0;
 		vrLen = 1211;
 		vrLoc = 189;
@@ -2772,7 +2777,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 61";
 		rLen = 0;
-		rLoc = 2120;
+		rLoc = 2169;
 		rType = 0;
 		vrLen = 1066;
 		vrLoc = 1810;
@@ -2845,11 +2850,25 @@
 		vrLen = 0;
 		vrLoc = 2955;
 	};
+	421539A01146029E0011C7B6 /* LookAndFeel.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 570}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 653}";
+		};
+	};
 	421539A11146029E0011C7B6 /* LookAndFeel.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {938, 960}}";
 			sepNavSelRange = "{0, 0}";
 			sepNavVisRange = "{550, 1706}";
+		};
+	};
+	421539E711460AC00011C7B6 /* MainConfigurationViewController.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {938, 570}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 472}";
 		};
 	};
 	421539E811460AC00011C7B6 /* MainConfigurationViewController.m */ = {
@@ -2904,7 +2923,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 57";
 		rLen = 0;
-		rLoc = 2089;
+		rLoc = 2138;
 		rType = 0;
 		vrLen = 1426;
 		vrLoc = 1096;
@@ -2914,7 +2933,7 @@
 		fRef = 420C75381144F065008F46B4 /* AccelerometerConfigurationViewController.m */;
 		name = "AccelerometerConfigurationViewController.m: 39";
 		rLen = 0;
-		rLoc = 1416;
+		rLoc = 1530;
 		rType = 0;
 		vrLen = 1692;
 		vrLoc = 326;
@@ -3084,7 +3103,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 57";
 		rLen = 0;
-		rLoc = 2089;
+		rLoc = 2138;
 		rType = 0;
 		vrLen = 1559;
 		vrLoc = 1421;
@@ -3119,6 +3138,56 @@
 		vrLen = 1463;
 		vrLoc = 381;
 	};
+	428D455B114791E2001E7BCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 429B01381143B561000D1330 /* AccelerometerView.m */;
+		name = "AccelerometerView.m: 26";
+		rLen = 0;
+		rLoc = 956;
+		rType = 0;
+		vrLen = 1463;
+		vrLoc = 381;
+	};
+	428D455C114791E2001E7BCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 00FE473A1146335F00D921B0 /* FFPlayer.m */;
+		name = "FFPlayer.m: 45";
+		rLen = 85;
+		rLoc = 807;
+		rType = 0;
+		vrLen = 970;
+		vrLoc = 442;
+	};
+	428D455D114791E2001E7BCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 00FE47311146335F00D921B0 /* FFAVFrameQueue.m */;
+		name = "FFAVFrameQueue.m: 37";
+		rLen = 0;
+		rLoc = 753;
+		rType = 0;
+		vrLen = 832;
+		vrLoc = 385;
+	};
+	428D455E114791E2001E7BCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* SteerAppDelegate.m */;
+		name = "SteerAppDelegate.m: 41";
+		rLen = 6;
+		rLoc = 1217;
+		rType = 0;
+		vrLen = 1648;
+		vrLoc = 915;
+	};
+	428D455F114791E2001E7BCE /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 1D3623250D0F684500981E51 /* SteerAppDelegate.m */;
+		name = "SteerAppDelegate.m: 39";
+		rLen = 0;
+		rLoc = 1014;
+		rType = 0;
+		vrLen = 1648;
+		vrLoc = 915;
+	};
 	429B00A1114390BC000D1330 /* AccelerometerViewController.m:104 */ = {
 		isa = PBXFileBreakpoint;
 		actions = (
@@ -3133,22 +3202,22 @@
 		ignoreCount = 0;
 		lineNumber = 104;
 		location = Steer;
-		modificationTime = 289901331.736247;
+		modificationTime = 289903902.24761;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
 	429B00D01143A2F0000D1330 /* ConfigurationViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {938, 550}}";
-			sepNavSelRange = "{397, 0}";
-			sepNavVisRange = "{0, 398}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 570}}";
+			sepNavSelRange = "{389, 0}";
+			sepNavVisRange = "{0, 418}";
 		};
 	};
 	429B00D11143A2F0000D1330 /* ConfigurationViewController.m */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {1146, 1504}}";
 			sepNavSelRange = "{2406, 0}";
-			sepNavVisRange = "{1964, 991}";
+			sepNavVisRange = "{1942, 1013}";
 		};
 	};
 	429B00FC1143B0C6000D1330 /* ConfigurationViewController.m:95 */ = {
@@ -3165,7 +3234,7 @@
 		ignoreCount = 0;
 		lineNumber = 95;
 		location = Steer;
-		modificationTime = 289901331.73627;
+		modificationTime = 289903902.247675;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3203,7 +3272,7 @@
 		ignoreCount = 0;
 		lineNumber = 56;
 		location = Steer;
-		modificationTime = 289901331.736281;
+		modificationTime = 289903902.247694;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3221,7 +3290,7 @@
 		ignoreCount = 0;
 		lineNumber = 110;
 		location = Steer;
-		modificationTime = 289901332.303304;
+		modificationTime = 289903902.674016;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3239,7 +3308,7 @@
 		ignoreCount = 0;
 		lineNumber = 110;
 		location = Steer;
-		modificationTime = 289901332.355045;
+		modificationTime = 289903902.709757;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3257,7 +3326,7 @@
 		ignoreCount = 0;
 		lineNumber = 110;
 		location = Steer;
-		modificationTime = 289901332.389789;
+		modificationTime = 289903902.741782;
 		originalNumberOfMultipleMatches = 1;
 		state = 1;
 	};
@@ -3270,7 +3339,7 @@
 	};
 	429B01381143B561000D1330 /* AccelerometerView.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {938, 1088}}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 1120}}";
 			sepNavSelRange = "{956, 0}";
 			sepNavVisRange = "{381, 1463}";
 		};
@@ -3289,7 +3358,7 @@
 		ignoreCount = 0;
 		lineNumber = 64;
 		location = Steer;
-		modificationTime = 289901331.736336;
+		modificationTime = 289903902.247938;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3307,7 +3376,7 @@
 		ignoreCount = 0;
 		lineNumber = 60;
 		location = Steer;
-		modificationTime = 289901331.736469;
+		modificationTime = 289903902.247958;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3325,7 +3394,7 @@
 		ignoreCount = 0;
 		lineNumber = 56;
 		location = Steer;
-		modificationTime = 289901331.736519;
+		modificationTime = 289903902.247979;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3371,16 +3440,16 @@
 	};
 	429B016F1143BBDF000D1330 /* SharedSettings.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {938, 592}}";
-			sepNavSelRange = "{455, 0}";
-			sepNavVisRange = "{26, 903}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 640}}";
+			sepNavSelRange = "{293, 0}";
+			sepNavVisRange = "{24, 1192}";
 		};
 	};
 	429B01701143BBDF000D1330 /* SharedSettings.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1091, 1600}}";
-			sepNavSelRange = "{4026, 0}";
-			sepNavVisRange = "{3035, 1373}";
+			sepNavIntBoundsRect = "{{0, 0}, {1020, 1888}}";
+			sepNavSelRange = "{5080, 0}";
+			sepNavVisRange = "{0, 1132}";
 		};
 	};
 	429B01721143BCAC000D1330 /* PBXTextBookmark */ = {
@@ -3398,7 +3467,7 @@
 		fRef = 42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */;
 		name = "AccelerometerViewController.m: 26";
 		rLen = 0;
-		rLoc = 903;
+		rLoc = 952;
 		rType = 0;
 		vrLen = 1249;
 		vrLoc = 4646;
@@ -3490,7 +3559,7 @@
 		fRef = 429B01701143BBDF000D1330 /* SharedSettings.m */;
 		name = "SharedProperties.m: 19";
 		rLen = 0;
-		rLoc = 867;
+		rLoc = 910;
 		rType = 0;
 		vrLen = 1883;
 		vrLoc = 259;
@@ -3530,7 +3599,7 @@
 		fRef = 429B016F1143BBDF000D1330 /* SharedSettings.h */;
 		name = "SharedProperties.h: 34";
 		rLen = 0;
-		rLoc = 929;
+		rLoc = 982;
 		rType = 0;
 		vrLen = 858;
 		vrLoc = 0;
@@ -3609,7 +3678,7 @@
 		ignoreCount = 0;
 		lineNumber = 23;
 		location = Steer;
-		modificationTime = 289901331.736065;
+		modificationTime = 289903902.247027;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3644,7 +3713,7 @@
 		ignoreCount = 0;
 		lineNumber = 45;
 		location = Steer;
-		modificationTime = 289901331.736113;
+		modificationTime = 289903902.247078;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3667,9 +3736,9 @@
 	};
 	42A21E261143331C00FDE34A /* DualJoystickViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1153, 1200}}";
-			sepNavSelRange = "{1675, 0}";
-			sepNavVisRange = "{189, 1211}";
+			sepNavIntBoundsRect = "{{0, 0}, {1153, 1120}}";
+			sepNavSelRange = "{1185, 0}";
+			sepNavVisRange = "{551, 1373}";
 			sepNavWindowFrame = "{{86, 259}, {688, 773}}";
 		};
 	};
@@ -3706,29 +3775,29 @@
 	42A21E671143404600FDE34A /* SendUDP.c */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {938, 832}}";
-			sepNavSelRange = "{867, 0}";
-			sepNavVisRange = "{130, 926}";
+			sepNavSelRange = "{967, 4}";
+			sepNavVisRange = "{17, 967}";
 		};
 	};
 	42A21E681143404600FDE34A /* SendUDP.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {938, 528}}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 570}}";
 			sepNavSelRange = "{275, 0}";
 			sepNavVisRange = "{0, 617}";
 		};
 	};
 	42A21F0D11435E6D00FDE34A /* AccelerometerViewController.h */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {938, 550}}";
+			sepNavIntBoundsRect = "{{0, 0}, {938, 570}}";
 			sepNavSelRange = "{382, 0}";
-			sepNavVisRange = "{0, 897}";
+			sepNavVisRange = "{0, 1009}";
 		};
 	};
 	42A21F0E11435E6D00FDE34A /* AccelerometerViewController.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1146, 3120}}";
-			sepNavSelRange = "{2089, 0}";
-			sepNavVisRange = "{1421, 1559}";
+			sepNavIntBoundsRect = "{{0, 0}, {1146, 3184}}";
+			sepNavSelRange = "{892, 0}";
+			sepNavVisRange = "{4170, 1514}";
 			sepNavWindowFrame = "{{109, 238}, {688, 773}}";
 		};
 	};
@@ -3780,7 +3849,7 @@
 		ignoreCount = 0;
 		lineNumber = 72;
 		location = Steer;
-		modificationTime = 289901331.736133;
+		modificationTime = 289903902.247098;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3798,7 +3867,7 @@
 		ignoreCount = 0;
 		lineNumber = 119;
 		location = Steer;
-		modificationTime = 289901331.736155;
+		modificationTime = 289903902.247247;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3816,7 +3885,7 @@
 		ignoreCount = 0;
 		lineNumber = 118;
 		location = Steer;
-		modificationTime = 289901331.736173;
+		modificationTime = 289903902.247312;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3834,7 +3903,7 @@
 		ignoreCount = 0;
 		lineNumber = 70;
 		location = Steer;
-		modificationTime = 289901331.736189;
+		modificationTime = 289903902.247371;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3852,7 +3921,7 @@
 		ignoreCount = 0;
 		lineNumber = 65;
 		location = Steer;
-		modificationTime = 289901331.736206;
+		modificationTime = 289903902.247429;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3870,7 +3939,7 @@
 		ignoreCount = 0;
 		lineNumber = 28;
 		location = Steer;
-		modificationTime = 289901331.736221;
+		modificationTime = 289903902.247489;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
@@ -3888,7 +3957,7 @@
 		ignoreCount = 0;
 		lineNumber = 117;
 		location = Steer;
-		modificationTime = 289901331.736233;
+		modificationTime = 289903902.247547;
 		originalNumberOfMultipleMatches = 1;
 		state = 2;
 	};
