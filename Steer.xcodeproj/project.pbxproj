@@ -398,8 +398,10 @@
 					"\"$(SRCROOT)/Libraries/ffmpeg/libswscale\"",
 					"\"$(SRCROOT)/Libraries/ffmpeg/libavdevice\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Steer;
 				SDKROOT = iphoneos3.0;
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -423,8 +425,10 @@
 					"\"$(SRCROOT)/Libraries/ffmpeg/libswscale\"",
 					"\"$(SRCROOT)/Libraries/ffmpeg/libavdevice\"",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = Steer;
 				SDKROOT = iphoneos3.0;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};

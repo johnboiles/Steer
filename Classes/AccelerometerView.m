@@ -25,7 +25,8 @@
     _powerIndicatorView.center = CGPointMake(10, 160);
     _powerIndicatorView.backgroundColor = [UIColor greenColor];
     [self addSubview:_powerIndicatorView];
-
+    
+    self.backgroundColor = [UIColor clearColor];
   }
   return self;
 }

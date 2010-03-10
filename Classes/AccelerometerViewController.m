@@ -10,6 +10,7 @@
 #import "math.h"
 #import "AccelerometerConfigurationViewController.h"
 #import "SharedSettings.h"
+#import "LookAndFeel.h"
 
 @implementation AccelerometerViewController
 
@@ -45,10 +46,7 @@ tiltAngleMax=_tiltAngleMax, rollAngleMax=_rollAngleMax;
   _accelerometerView.delegate = self;
   self.view = _accelerometerView;
 
-  UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeCustom];
-  [stopButton setBackgroundImage:[UIImage imageNamed:@"x.png"] forState:UIControlStateNormal];
-  stopButton.frame = CGRectMake(440, 0, 40, 40);
-  [stopButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+  UIButton *stopButton = [LookAndFeel closeButtonWithCenter:CGPointMake(460,20) target:self action:@selector(close)];
   [self.view addSubview:stopButton];
 }
 

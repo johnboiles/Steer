@@ -97,6 +97,12 @@
   [_scrollView addSubview:_frequencySlider];
   y += 40;
   
+  UIButton *closeButton = [LookAndFeel closeButtonWithCenter:CGPointMake(300, 460) target:self action:@selector(close)];
+  [_scrollView addSubview:closeButton];
+}
+
+- (void)close {
+  [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

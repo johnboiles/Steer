@@ -28,13 +28,15 @@
   // Hide the status bar
   [UIApplication sharedApplication].statusBarHidden = YES;
   
-  DualJoystickViewController *dualJoystickViewController = [[DualJoystickViewController alloc] init];
-  [_window addSubview:[dualJoystickViewController view]];
+  //DualJoystickViewController *dualJoystickViewController = [[DualJoystickViewController alloc] init];
+  //[_window addSubview:[dualJoystickViewController view]];
+
+
   
   GHGLView *GLView = [[GHGLView alloc] init];
   GLView.frame = CGRectMake(0, 0, 320, 480);
 
-  //NSString *testURLString = @"http://bridgecam2.halton.gov.uk/mjpg/video.mjpg";  
+  //NSString *URLString = @"http://bridgecam2.halton.gov.uk/mjpg/video.mjpg";  
   NSString *URLString = @"http://wificar:carwifi@192.168.1.253/nphMotionJpeg?Resolution=320x240&Quality=Motion";
   NSString *format = @"mjpeg";
   NSURL *URL = [NSURL URLWithString:URLString];
@@ -48,17 +50,21 @@
 
   [_window addSubview:GLView];
   [_window sendSubviewToBack:GLView];
-    
+
+  MainConfigurationViewController *mainConfigurationViewController = [[MainConfigurationViewController alloc] init];
+  mainConfigurationViewController.window = _window;
+  [_window addSubview:[mainConfigurationViewController view]];
+  
   //AccelerometerViewController *accelerometerViewController = [[AccelerometerViewController alloc] init];
   //[_window addSubview:[accelerometerViewController view]];
-  
+
   //MainConfigurationViewController *mainConfigurationViewController = [[MainConfigurationViewController alloc] init];
   //[_window addSubview:[mainConfigurationViewController view]];
-  
+
   //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainConfigurationViewController];
   //[_window addSubview:[navigationController view]];  
-  
-    // Override point for customization after application launch
+
+  // Override point for customization after application launch
   [_window makeKeyAndVisible];
 }
 
