@@ -28,6 +28,7 @@
 }
 
 - (void)close {
+  [_carControl stop];
   [_delegate controlViewControllerWillClose:self];
 }
 

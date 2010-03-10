@@ -11,7 +11,8 @@
 @implementation SharedSettings
 @synthesize accelerometerSteeringDeadZone=_accelerometerSteeringDeadZone, accelerometerPowerDeadZone=_accelerometerPowerDeadZone, 
 accelerometerSteeringSensitivity=_accelerometerSteeringSensitivity, accelerometerPowerSensitivity=_accelerometerPowerSensitivity,
-accelerometerFrequency=_accelerometerFrequency, dualJoystickDeadZone=_dualJoystickDeadZone, ipAddress=_ipAddress, cameraAddress=_cameraAddress;
+accelerometerFrequency=_accelerometerFrequency, accelerometerFilter=_accelerometerFilter, dualJoystickDeadZone=_dualJoystickDeadZone, 
+ipAddress=_ipAddress, cameraAddress=_cameraAddress;
 
 static SharedSettings *_sharedSettingsManager;
 
@@ -39,6 +40,7 @@ static SharedSettings *_sharedSettingsManager;
     [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerSteeringSensitivity] forKey:@"accelerometerSteeringSensitivity"];
     [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerPowerSensitivity] forKey:@"accelerometerPowerSensitivity"];
     [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerFrequency] forKey:@"accelerometerFrequency"];
+    [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerFrequency] forKey:@"accelerometerFilter"];
     [standardUserDefaults setObject:[NSNumber numberWithDouble:_dualJoystickDeadZone] forKey:@"dualJoystickDeadZone"];
     [standardUserDefaults setObject:_ipAddress forKey:@"ipAddress"];
     [standardUserDefaults setObject:_cameraAddress forKey:@"cameraAddress"];
@@ -61,6 +63,7 @@ static SharedSettings *_sharedSettingsManager;
                                                       [NSNumber numberWithDouble:1],
                                                       [NSNumber numberWithDouble:1],
                                                       [NSNumber numberWithDouble:40],
+                                                      [NSNumber numberWithDouble:0.7],
                                                       [NSNumber numberWithDouble:.05],
                                                       @"192.168.1.100",
                                                       @"http://wificar:carwifi@192.168.1.253/nphMotionJpeg?Resolution=320x240&Quality=Standard",
@@ -71,6 +74,7 @@ static SharedSettings *_sharedSettingsManager;
                                         @"accelerometerSteeringSensitivity",
                                         @"accelerometerPowerSensitivity",
                                         @"accelerometerFrequency",
+                                        @"accelerometerFilter",
                                         @"dualJoystickDeadZone",
                                         @"ipAddress",
                                         @"cameraAddress",
@@ -85,6 +89,7 @@ static SharedSettings *_sharedSettingsManager;
     _accelerometerSteeringSensitivity = [[standardUserDefaults objectForKey:@"accelerometerSteeringSensitivity"] doubleValue];
     _accelerometerPowerSensitivity = [[standardUserDefaults objectForKey:@"accelerometerPowerSensitivity"] doubleValue];
     _accelerometerFrequency = [[standardUserDefaults objectForKey:@"accelerometerFrequency"] doubleValue];
+    _accelerometerFilter = [[standardUserDefaults objectForKey:@"accelerometerFilter"] doubleValue];    
     _dualJoystickDeadZone = [[standardUserDefaults objectForKey:@"dualJoystickDeadZone"] doubleValue];
     _ipAddress = [NSString stringWithString:[standardUserDefaults stringForKey:@"ipAddress"]];
     _cameraAddress = [NSString stringWithString:[standardUserDefaults stringForKey:@"cameraAddress"]];

@@ -7,6 +7,7 @@
 //
 
 #import "DualJoystickViewController.h"
+#import "LookAndFeel.h"
 
 @implementation DualJoystickViewController
 
@@ -25,6 +26,8 @@
 - (void)loadView {
   [super loadView];
   
+  self.view.frame = CGRectMake(0, 0, 480, 320);
+  
   _powerJoystick = [[TouchJoystickView alloc] initWithFrame:CGRectMake(0, 0, 240, 320) delegate:self];
   _powerJoystick.verticalAxis = YES;
   [self.view addSubview:_powerJoystick];
@@ -33,20 +36,9 @@
   _steeringJoystick.horizontalAxis = YES;
   [self.view addSubview:_steeringJoystick];
   
-  //UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeCustom];
-  [stopButton setBackgroundImage:[UIImage imageNamed:@"x.png"] forState:UIControlStateNormal];
-  stopButton.frame = CGRectMake(440, 0, 40, 40);
-  [stopButton addTarget:self action:@selector(close) forControlEvents:UIControlEventTouchUpInside];
+  UIButton *stopButton = [LookAndFeel closeButtonWithCenter:CGPointMake(460,20) target:self action:@selector(close)];
   [self.view addSubview:stopButton];
 }
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
 
 // Override to allow orientations other than the default portrait orientation.
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

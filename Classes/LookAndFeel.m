@@ -47,5 +47,13 @@
   [slider addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
   return slider;
 }
+
++ (UIButton *)closeButtonWithCenter:(CGPoint)center target:(id)target action:(SEL)action {
+  UIButton *stopButton = [UIButton buttonWithType:UIButtonTypeCustom];
+  [stopButton setBackgroundImage:[UIImage imageNamed:@"x.png"] forState:UIControlStateNormal];
+  stopButton.frame = CGRectMake(center.x - 20, center.y - 20, 40, 40);
+  [stopButton addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+  return stopButton; 
+}
   
 @end

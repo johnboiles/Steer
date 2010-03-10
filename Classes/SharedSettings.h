@@ -6,15 +6,13 @@
 //  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-
 @interface SharedSettings : NSObject {
   // Accelerometer View
   double _accelerometerSteeringDeadZone;
   double _accelerometerPowerDeadZone;
   double _accelerometerSteeringSensitivity;
   double _accelerometerPowerSensitivity;
+  double _accelerometerFilter;
   double _accelerometerFrequency;
   
   // Dual Joystick View
@@ -30,6 +28,7 @@
 @property (assign, nonatomic) double accelerometerSteeringSensitivity;
 @property (assign, nonatomic) double accelerometerPowerSensitivity;
 @property (assign, nonatomic) double accelerometerFrequency;
+@property (assign, nonatomic) double accelerometerFilter;
 @property (assign, nonatomic) double dualJoystickDeadZone;
 @property (retain, nonatomic) NSString *ipAddress;
 @property (retain, nonatomic) NSString *cameraAddress;

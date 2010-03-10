@@ -11,6 +11,9 @@
 @interface MainConfigurationViewController : ConfigurationViewController <UITextFieldDelegate, ControlViewControllerDelegate> {
   UITextField *_ipAddressTextView;
   UITextField *_cameraAddressTextView;
+  UIWindow *_window;
 }
+
+@property (assign, nonatomic) UIWindow *window;
 
 @end

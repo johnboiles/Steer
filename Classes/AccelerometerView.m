@@ -16,16 +16,18 @@
 - (id)initWithFrame:(CGRect)frame {
   if (self = [super initWithFrame:frame]) {
     // TODO: I should make these indicators their own class
-    _steeringIndicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 40, 20)];
-    _steeringIndicatorView.center = CGPointMake(240, 10);
-    _steeringIndicatorView.backgroundColor = [UIColor greenColor];
+    _steeringIndicatorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
+    _steeringIndicatorView.center = CGPointMake(240, _steeringIndicatorView.frame.size.height / 2);
+    _steeringIndicatorView.backgroundColor = [UIColor clearColor];
     [self addSubview:_steeringIndicatorView];
 
-    _powerIndicatorView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 40)];
-    _powerIndicatorView.center = CGPointMake(10, 160);
-    _powerIndicatorView.backgroundColor = [UIColor greenColor];
+    _powerIndicatorView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"arrow.png"]];
+    _powerIndicatorView.center = CGPointMake(_steeringIndicatorView.frame.size.height / 2, 160);
+    _powerIndicatorView.transform = CGAffineTransformMakeRotation(-3.14159/2);
+    _powerIndicatorView.backgroundColor = [UIColor clearColor];
     [self addSubview:_powerIndicatorView];
-
+    
+    self.backgroundColor = [UIColor clearColor];
   }
   return self;
 }
@@ -46,8 +48,8 @@
     [UIView setAnimationCurve:UIViewAnimationCurveLinear];
     [UIView setAnimationDuration:0.1];
   }
-  _steeringIndicatorView.center = CGPointMake(steering * 240 + 240, 10);
-  _powerIndicatorView.center = CGPointMake(10, -power * 160 + 160); 
+  _steeringIndicatorView.center = CGPointMake(steering * 240 + 240, _steeringIndicatorView.frame.size.height / 2);
+  _powerIndicatorView.center = CGPointMake(_steeringIndicatorView.frame.size.height / 2, -power * 160 + 160); 
   if (animated) [UIView commitAnimations];
 }
 

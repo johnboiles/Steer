@@ -17,4 +17,6 @@
 
 + (UISlider *)configSliderWithFrame:(CGRect)frame target:(id)target action:(SEL)action;
 
++ (UIButton *)closeButtonWithCenter:(CGPoint)center target:(id)target action:(SEL)action;
+
 @end

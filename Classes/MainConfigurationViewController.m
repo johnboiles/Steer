@@ -16,6 +16,8 @@
 
 @implementation MainConfigurationViewController
 
+@synthesize window=_window;
+
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)init {
   if (self = [super init]) {
@@ -31,23 +33,30 @@
 - (void)_openAccelerometerController {
   AccelerometerViewController *controller = [[AccelerometerViewController alloc] init];
   controller.delegate = self;
-  controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-  //[[self navigationController] pushViewController:controller animated:YES];
-  [self presentModalViewController:controller animated:YES];
+  // Rotate manually since the view controller doesnt seem to be correctly handling rotation
+  controller.view.transform = CGAffineTransformMakeRotation(3.14159/2);
+  controller.view.center = CGPointMake(160, 240);
+  [_window addSubview:[controller view]];
+  [self.view removeFromSuperview];
 }
 
 - (void)_openDualJoystickController {
   DualJoystickViewController *controller = [[DualJoystickViewController alloc] init];
   controller.delegate = self;
-	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-  //[[self navigationController] pushViewController:controller animated:YES];
-	[self presentModalViewController:controller animated:YES];
+  // Rotate manually since the view controller doesnt seem to be correctly handling rotation
+  controller.view.transform = CGAffineTransformMakeRotation(3.14159/2);
+  controller.view.center = CGPointMake(160, 240);
+  // Apparently this doesn't remain the view
+  [_window addSubview:[controller view]];
+  // Removing from superview for speed
+  [self.view removeFromSuperview];
 }
 
 - (void)_openAccelerometerConfiguration {
   UIViewController *controller = [[AccelerometerConfigurationViewController alloc] init];
   controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[[self navigationController] pushViewController:controller animated:YES];
+	[self presentModalViewController:controller animated:YES];
+  //[[self navigationController] pushViewController:controller animated:YES];
 }
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -145,7 +154,8 @@
 #pragma mark Delegates(ControlViewController)
 
 - (void)controlViewControllerWillClose:(ControlViewController *)controlViewController {
-  [self dismissModalViewControllerAnimated:YES];
+  [controlViewController.view removeFromSuperview];
+  [_window addSubview:self.view];
 }
 
 @end

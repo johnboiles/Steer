@@ -31,6 +31,8 @@
     [[SharedSettings sharedManager] setAccelerometerPowerDeadZone:sender.value];
   } else if (sender == _frequencySlider) {
     [[SharedSettings sharedManager] setAccelerometerFrequency:sender.value];
+  } else if (sender == _filterSlider) {
+    [[SharedSettings sharedManager] setAccelerometerFilter:sender.value];
   }
 }
 
@@ -97,6 +99,23 @@
   [_scrollView addSubview:_frequencySlider];
   y += 40;
   
+  UILabel *filterLabel = [LookAndFeel configLabelWithFrame:CGRectMake(x + 8, y, 292, 20) text:@"Filter Constant (larger is slower)"];
+  [_scrollView addSubview:filterLabel];
+	y += 25;
+  
+  _filterSlider = [LookAndFeel configSliderWithFrame:CGRectMake(x, y, 300, 30) target:self action:@selector(_sliderValueDidChange:)];  
+  _filterSlider.minimumValue = 0;
+  _filterSlider.maximumValue = 1;
+  _filterSlider.value = [[SharedSettings sharedManager] accelerometerFilter];
+  [_scrollView addSubview:_filterSlider];
+  y += 40;
+  
+  UIButton *closeButton = [LookAndFeel closeButtonWithCenter:CGPointMake(300, 460) target:self action:@selector(close)];
+  [_scrollView addSubview:closeButton];
+}
+
+- (void)close {
+  [self dismissModalViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
