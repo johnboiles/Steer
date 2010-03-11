@@ -6,11 +6,22 @@
 //  Copyright __MyCompanyName__ 2010. All rights reserved.
 //
 
-@interface SteerAppDelegate : NSObject <UIApplicationDelegate> {
-    UIWindow *_window;
+#import "MainConfigurationViewController.h"
+#import "FFPlayerView.h"
+
+@interface SteerAppDelegate : NSObject <UIApplicationDelegate, MainConfigurationViewControllerDelegate> {
+  
+  UIWindow *_window;
+  UINavigationController *_navigationController;
+  
+  UIViewController *_windowViewController;
+  
+  FFPlayerView *_playerView;
 }
 
-@property (nonatomic, retain) UIWindow *window;
+- (void)setWindowViewController:(UIViewController *)viewController;
+
+- (void)play;
 
 @end
 

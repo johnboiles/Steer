@@ -22,13 +22,14 @@
   
   uint8_t *_videoData;
   int _videoDataSize;
+  
+  BOOL _started;
+  BOOL _running;
 }
 
 @property (readonly) FFPlayer *player;
 
 - (id)initWithURL:(NSURL *)URL format:(NSString *)format;
-
-- (AVFrame *)next;
 
 - (uint8_t *)nextData;
 

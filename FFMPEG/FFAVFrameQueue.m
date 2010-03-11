@@ -24,6 +24,7 @@
 }
 
 - (void)dealloc {
+  _running = NO;
   [_player release];
   [_URL release];
   [_format release];
@@ -32,12 +33,14 @@
 }
 
 - (void)_run {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];  
+  _running = YES;
+  FFDebug(@"Started");
     
   // TODO(gabe): Must be power of 2 for texture
   FFPlayer *player = [[FFPlayer alloc] initWithWidth:256 height:256 pixelFormat:PIX_FMT_RGB24];
   
-  while (![player isOpen]) {    
+  while (![player isOpen] && _running) {    
     if (![player openWithURL:_URL format:_format error:nil]) {
       FFDebug(@"Error opening player, waiting & trying again");
       [NSThread sleepForTimeInterval:2];
@@ -53,8 +56,14 @@
   _videoDataSize = [_player bufferLength];
   _videoData = (uint8_t*)av_malloc(_videoDataSize * sizeof(uint8_t));
   
-  while (YES) {    
-    [_player readFrame:_frame error:nil];    
+  BOOL running = YES;
+  while (running && _running) {  
+    NSError *error = nil;
+    [_player readFrame:_frame error:&error];    
+    if (error) {
+      running = NO;
+      continue;
+    }
     _readFrameIndex++;
     //[NSThread sleepForTimeInterval:0.1];
   }
@@ -62,36 +71,16 @@
   av_free(_frame);
   av_free(_videoData);
   
-  [pool release];
-}
-
-- (AVFrame *)next {  
-  static BOOL Started = NO;
-  if (!Started) {
-    Started = YES;
-    [NSThread detachNewThreadSelector:@selector(_run) toTarget:self withObject:nil];      
-  }
-  
-  if (![_player isOpen]) return NULL;
-  if (_frame == NULL) return NULL;
-  
-  if (_readFrameIndex == _frameIndex) {
-    //FFDebug(@"Skipping, frame unchanged");
-    return NULL;
-  }
-  
-  [_lock lock];
-  AVFrame *frame = [_player scaleFrame:_frame error:nil]; 
-  _frameIndex = _readFrameIndex;
-  [_lock unlock];
-  return frame;
+  _running = NO;
+  _started = NO;
+  FFDebug(@"Stopped");
+  [pool release];  
 }
 
 - (uint8_t *)nextData {  
-  static BOOL Started = NO;
-  if (!Started) {
-    Started = YES;
-    [NSThread detachNewThreadSelector:@selector(_run) toTarget:self withObject:nil];      
+  if (!_started) {
+    _started = YES;    
+    [NSThread detachNewThreadSelector:@selector(_run) toTarget:self withObject:nil];          
   }
   
   if (![_player isOpen]) return NULL;

@@ -15,35 +15,23 @@
 
 @implementation FFPlayerView
 
+@synthesize URLString=_URLString, format=_format;
+
 - (id)init {
   if ((self = [super init])) {
     self.frame = CGRectMake(0, 0, 320, 480);
     
-    /*!
-    _displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 320, 30)];
+    _displayLabel = [[UILabel alloc] initWithFrame:CGRectMake(-145, 240, 320, 30)];
     _displayLabel.textColor = [UIColor whiteColor];
     _displayLabel.backgroundColor = [UIColor blackColor];
     _displayLabel.font = [UIFont fontWithName:@"Helvetica" size:14];
+    _displayLabel.transform = CGAffineTransformMakeRotation(M_PI/2);
     [self addSubview:_displayLabel];
-     */
   
-    //NSString *URLString = @"http://193.138.213.169/nphMotionJpeg?Resolution=160x120&Quality=Mobile";  
-    //NSString *URLString = @"http://camera.kkbtv.com:8080/nphMotionJpeg?Resolution=320x240&Quality=Motion";  
-    //NSString *URLString = @"http://bridgecam2.halton.gov.uk/mjpg/video.mjpg";
-    
-    NSString *URLString = @"http://wificar:carwifi@192.168.1.253/nphMotionJpeg?Resolution=160x120&Quality=Mobile";
-    NSString *format = @"mjpeg";
-    NSURL *URL = [NSURL URLWithString:URLString];
-    
-    FFAVFrameQueue *frameQueue = [[FFAVFrameQueue alloc] initWithURL:URL format:format];  
-    FFGLDrawable *drawable = [[FFGLDrawable alloc] initWithFrameQueue:frameQueue];
-    [frameQueue release];
-    self.drawable = drawable;
-    [drawable release];
     [self setAnimationInterval:(1.0 / 10.0)];  
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_onDisplay:) name:FFDisplayNotification object:nil];    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_onOpen) name:FFOpenNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(_onOpened) name:FFOpenNotification object:nil];
   }
   return self;
 }
@@ -57,14 +45,21 @@
 - (void)_onDisplay:(NSNotification *)notification {
   NSString *text = [notification object];
   FFDebug(@"%@", text);
+  _displayLabel.hidden = NO;
   _displayLabel.text = text;
 }
 
-- (void)_onOpen {
-  
+- (void)_onOpened {
+  _displayLabel.hidden = YES;
 }
 
-- (void)start {
+- (void)play {  
+  FFAVFrameQueue *frameQueue = [[FFAVFrameQueue alloc] initWithURL:[NSURL URLWithString:_URLString] format:_format];  
+  FFGLDrawable *drawable = [[FFGLDrawable alloc] initWithFrameQueue:frameQueue];
+  [frameQueue release];
+  self.drawable = drawable;
+  [drawable release];  
+  
   [self startAnimation];
 }
 

@@ -176,7 +176,7 @@ tiltAngleMax=_tiltAngleMax, rollAngleMax=_rollAngleMax;
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
   NSArray *touchesArray = [touches allObjects];
-  CGPoint point = [[touchesArray objectAtIndex:0] locationInView:self.view];
+  CGPoint point = [[touchesArray objectAtIndex:0] locationInView:self.view]; point;
   Debug(@"Touches Began x:%f y:%f", point.x, point.y);
   self.accelerometerActive = YES;
 }

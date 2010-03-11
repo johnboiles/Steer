@@ -16,8 +16,6 @@
 
 @implementation SteerAppDelegate
 
-@synthesize window=_window;
-
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
   [[SharedSettings sharedManager] retrieveDefaults];
   
@@ -26,29 +24,18 @@
   // Hide the status bar
   [UIApplication sharedApplication].statusBarHidden = YES;
   
-  //DualJoystickViewController *dualJoystickViewController = [[DualJoystickViewController alloc] init];
-  //[_window addSubview:[dualJoystickViewController view]];
-
-  FFPlayerView *playerView = [[FFPlayerView alloc] init];
-  [playerView start];
-  [_window addSubview:playerView];
-  [_window sendSubviewToBack:playerView];
-    
-  MainConfigurationViewController *mainConfigurationViewController = [[MainConfigurationViewController alloc] init];
-  mainConfigurationViewController.window = _window;
-  [_window addSubview:[mainConfigurationViewController view]];
+  _playerView = [[FFPlayerView alloc] init];
+  [_window addSubview:_playerView];
   
-  //AccelerometerViewController *accelerometerViewController = [[AccelerometerViewController alloc] init];
-  //[_window addSubview:[accelerometerViewController view]];
+  MainConfigurationViewController *mainConfigurationViewController = [[MainConfigurationViewController alloc] init];
+  mainConfigurationViewController.delegate = self;
+  _navigationController = [[UINavigationController alloc] initWithRootViewController:mainConfigurationViewController];  
+  [mainConfigurationViewController release];
+  
+  [self setWindowViewController:_navigationController];
 
-  //MainConfigurationViewController *mainConfigurationViewController = [[MainConfigurationViewController alloc] init];
-  //[_window addSubview:[mainConfigurationViewController view]];
-
-  //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainConfigurationViewController];
-  //[_window addSubview:[navigationController view]];  
-
-  // Override point for customization after application launch
   [_window makeKeyAndVisible];
+  [self play];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -57,8 +44,41 @@
 
 - (void)dealloc {
   [_window release];
+  [_navigationController release];
+  [_windowViewController release];
+  [_playerView release];
+  [[NSNotificationCenter defaultCenter] removeObserver:self];
   [super dealloc];
 }
 
+- (void)setWindowViewController:(UIViewController *)viewController {  
+  // Remove existing
+  [_windowViewController.view removeFromSuperview]; 
+  // Set current window view controller
+  [viewController retain];
+  [_windowViewController release];
+  _windowViewController = viewController;
+  [_window addSubview:_windowViewController.view];  
+}
+
+- (void)play {
+  _playerView.URLString = [[NSUserDefaults standardUserDefaults] objectForKey:@"cameraAddress"];
+  _playerView.format = @"mjpeg";
+  [_playerView play];
+}  
+
+#pragma mark Delegates(MainConfigurationViewController)
+
+- (void)mainConfigurationViewController:(MainConfigurationViewController *)mainConfigurationViewController 
+        shouldOpenControlViewController:(ControlViewController *)controlViewController {  
+  
+  [self setWindowViewController:controlViewController];
+}
+
+- (void)mainConfigurationViewController:(MainConfigurationViewController *)mainConfigurationViewController 
+       shouldCloseControlViewController:(ControlViewController *)controlViewController {
+
+  [self setWindowViewController:_navigationController];
+}
 
 @end

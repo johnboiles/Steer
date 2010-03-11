@@ -25,11 +25,6 @@
   return self;
 }
 
-- (void)dealloc {
-  //[_scrollView release];
-  [super dealloc];
-}
-
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
 - (void)loadView {
   [super loadView];
@@ -42,7 +37,7 @@
   _scrollView.bounces = YES;
   
   [self.view addSubview:_scrollView];
-  //[scrollView release];
+  [_scrollView release];
 }
 
 // Override to allow orientations other than the default portrait orientation.
@@ -66,7 +61,7 @@
   
   // Resize the scroll view (which is the root view of the window)
   CGRect viewFrame = [_scrollView frame];
-  viewFrame.size.height -= keyboardSize.height;
+  viewFrame.size.height -= keyboardSize.height + 44;
   _scrollView.frame = viewFrame;
  
   _keyboardShown = YES;
@@ -84,7 +79,7 @@
   
   // Reset the height of the scroll view to its original value
   CGRect viewFrame = [_scrollView frame];
-  viewFrame.size.height += keyboardSize.height;
+  viewFrame.size.height += keyboardSize.height + 44;
   _scrollView.frame = viewFrame;
   
   _keyboardShown = NO;

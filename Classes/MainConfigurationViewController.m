@@ -8,15 +8,13 @@
 
 #import "ControlViewController.h"
 #import "MainConfigurationViewController.h"
-#import "AccelerometerViewController.h"
-#import "DualJoystickViewController.h"
 #import "AccelerometerConfigurationViewController.h"
 #import "SharedSettings.h"
 #import "LookAndFeel.h"
 
 @implementation MainConfigurationViewController
 
-@synthesize window=_window;
+@synthesize delegate=_delegate;
 
 // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
 - (id)init {
@@ -31,32 +29,31 @@
 }
 
 - (void)_openAccelerometerController {
-  AccelerometerViewController *controller = [[AccelerometerViewController alloc] init];
-  controller.delegate = self;
-  // Rotate manually since the view controller doesnt seem to be correctly handling rotation
-  controller.view.transform = CGAffineTransformMakeRotation(3.14159/2);
-  controller.view.center = CGPointMake(160, 240);
-  [_window addSubview:[controller view]];
-  [self.view removeFromSuperview];
+  if (!_accelerometerViewController) {
+    _accelerometerViewController = [[AccelerometerViewController alloc] init];
+    _accelerometerViewController.delegate = self;
+    // Rotate manually since the view controller doesnt seem to be correctly handling rotation
+    _accelerometerViewController.view.transform = CGAffineTransformMakeRotation(M_PI/2);
+    _accelerometerViewController.view.center = CGPointMake(160, 240);
+  }
+  [_delegate mainConfigurationViewController:self shouldOpenControlViewController:_accelerometerViewController];
 }
 
 - (void)_openDualJoystickController {
-  DualJoystickViewController *controller = [[DualJoystickViewController alloc] init];
-  controller.delegate = self;
-  // Rotate manually since the view controller doesnt seem to be correctly handling rotation
-  controller.view.transform = CGAffineTransformMakeRotation(3.14159/2);
-  controller.view.center = CGPointMake(160, 240);
-  // Apparently this doesn't remain the view
-  [_window addSubview:[controller view]];
-  // Removing from superview for speed
-  [self.view removeFromSuperview];
+  if (!_dualJoystickViewController) {
+    _dualJoystickViewController = [[DualJoystickViewController alloc] init];
+    _dualJoystickViewController.delegate = self;
+    // Rotate manually since the view controller doesnt seem to be correctly handling rotation
+    _dualJoystickViewController.view.transform = CGAffineTransformMakeRotation(3.14159/2);
+    _dualJoystickViewController.view.center = CGPointMake(160, 240);
+  }
+  [_delegate mainConfigurationViewController:self shouldOpenControlViewController:_dualJoystickViewController];
 }
 
 - (void)_openAccelerometerConfiguration {
-  UIViewController *controller = [[AccelerometerConfigurationViewController alloc] init];
-  controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[self presentModalViewController:controller animated:YES];
-  //[[self navigationController] pushViewController:controller animated:YES];
+  AccelerometerConfigurationViewController *controller = [[AccelerometerConfigurationViewController alloc] init];
+  [self.navigationController pushViewController:controller animated:YES];
+  [controller release];
 }
 
 // Implement loadView to create a view hierarchy programmatically, without using a nib.
@@ -137,7 +134,7 @@
     // TODO: Check for valid IP Address here, or maybe in SharedSettings
     [[SharedSettings sharedManager] setIpAddress:_ipAddressTextView.text];
   } else if (textField == _cameraAddressTextView) {
-    [[SharedSettings sharedManager] setCameraAddress:_ipAddressTextView.text];
+    [[SharedSettings sharedManager] setCameraAddress:_cameraAddressTextView.text];
   }
   [textField resignFirstResponder];
 }
@@ -153,9 +150,9 @@
 
 #pragma mark Delegates(ControlViewController)
 
-- (void)controlViewControllerWillClose:(ControlViewController *)controlViewController {
-  [controlViewController.view removeFromSuperview];
-  [_window addSubview:self.view];
+- (void)controlViewControllerShouldClose:(ControlViewController *)controlViewController {
+  [_delegate mainConfigurationViewController:self shouldCloseControlViewController:controlViewController];
 }
+
 
 @end

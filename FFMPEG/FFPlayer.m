@@ -124,11 +124,15 @@ struct SwsContext *gScaleContext = NULL;
   // Assign video buffer to dest frame
   avpicture_fill((AVPicture *)_destFrame, _videoBuffer, _pixelFormat, _width, _height);
 
-  [[NSNotificationCenter defaultCenter] postNotificationName:FFOpenNotification object:nil];
+  [self performSelectorOnMainThread:@selector(_notifyOpened) withObject:nil waitUntilDone:NO];
     
   _open = YES;
   FFDebug(@"Opened");
   return YES;
+}
+
+- (void)_notifyOpened {
+  [[NSNotificationCenter defaultCenter] postNotificationName:FFOpenNotification object:nil];
 }
 
 - (int)bufferLength {

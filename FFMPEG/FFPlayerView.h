@@ -10,8 +10,14 @@
 
 @interface FFPlayerView : GHGLView {
   UILabel *_displayLabel;
+  
+  NSString *_URLString;
+  NSString *_format;
 }
 
-- (void)start;
+@property (retain, nonatomic) NSString *URLString;
+@property (retain, nonatomic) NSString *format;
+
+- (void)play;
 
 @end

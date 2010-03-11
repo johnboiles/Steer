@@ -25,10 +25,9 @@ static SharedSettings *_sharedSettingsManager;
   return self;
 }
 
-//I don't think this is ever called, so I'm expecting the user to saveDefaults
 - (void)dealloc {
   [_ipAddress release];
-  [self saveDefaults];
+  [_cameraAddress release];
   [super dealloc];
 }
 

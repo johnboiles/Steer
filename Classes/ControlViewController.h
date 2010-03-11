@@ -10,8 +10,8 @@
 
 @class ControlViewController;
 
-@protocol ControlViewControllerDelegate
-- (void)controlViewControllerWillClose:(ControlViewController *)controlViewController;
+@protocol ControlViewControllerDelegate <NSObject>
+- (void)controlViewControllerShouldClose:(ControlViewController *)controlViewController;
 @end
 
 @interface ControlViewController : UIViewController {

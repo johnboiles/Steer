@@ -7,13 +7,30 @@
 //
 
 #import "ConfigurationViewController.h"
+#import "AccelerometerViewController.h"
+#import "DualJoystickViewController.h"
+
+@class MainConfigurationViewController;
+
+@protocol MainConfigurationViewControllerDelegate <NSObject>
+- (void)mainConfigurationViewController:(MainConfigurationViewController *)mainConfigurationViewController 
+        shouldOpenControlViewController:(ControlViewController *)controlViewController;
+
+- (void)mainConfigurationViewController:(MainConfigurationViewController *)mainConfigurationViewController 
+        shouldCloseControlViewController:(ControlViewController *)controlViewController;
+
+@end
 
 @interface MainConfigurationViewController : ConfigurationViewController <UITextFieldDelegate, ControlViewControllerDelegate> {
   UITextField *_ipAddressTextView;
   UITextField *_cameraAddressTextView;
-  UIWindow *_window;
+  
+  id<MainConfigurationViewControllerDelegate> _delegate;
+  
+  AccelerometerViewController *_accelerometerViewController;
+  DualJoystickViewController *_dualJoystickViewController;
 }
 
-@property (assign, nonatomic) UIWindow *window;
+@property (assign, nonatomic) id<MainConfigurationViewControllerDelegate> delegate;
 
 @end

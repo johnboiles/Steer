@@ -74,10 +74,11 @@
 }
 
 - (void)drawView {
+  if (!_drawable) return;
   BOOL render = YES;
   if (render) {
     glBindFramebufferOES(GL_FRAMEBUFFER_OES, _viewFramebuffer);
-    render = [_drawable drawView:CGRectMake(0, 0, 320, 480) inView:self];
+    render = [_drawable drawView:self.frame inView:self];
     if (render) {
       glBindRenderbufferOES(GL_RENDERBUFFER_OES, _viewRenderbuffer);
       [_context presentRenderbuffer:GL_RENDERBUFFER_OES];
@@ -86,10 +87,18 @@
 }
 
 - (void)layoutSubviews {
+  if (!_drawable) return;
 	[EAGLContext setCurrentContext:_context];
 	[self _destroyFramebuffer];
 	[self _createFramebuffer];
 	[self drawView];
+}
+
+- (void)setDrawable:(id<GHGLViewDrawable>)drawable {
+  [drawable retain];
+  [_drawable release];
+  _drawable = drawable;
+  [self setNeedsLayout];
 }
 
 - (BOOL)_createFramebuffer {    

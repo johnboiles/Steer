@@ -29,7 +29,7 @@
 
 - (void)close {
   [_carControl stop];
-  [_delegate controlViewControllerWillClose:self];
+  [_delegate controlViewControllerShouldClose:self];
 }
 
 - (void)setSteering:(double)steering power:(double)power {
