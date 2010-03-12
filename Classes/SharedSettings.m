@@ -39,7 +39,7 @@ static SharedSettings *_sharedSettingsManager;
     [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerSteeringSensitivity] forKey:@"accelerometerSteeringSensitivity"];
     [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerPowerSensitivity] forKey:@"accelerometerPowerSensitivity"];
     [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerFrequency] forKey:@"accelerometerFrequency"];
-    [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerFrequency] forKey:@"accelerometerFilter"];
+    [standardUserDefaults setObject:[NSNumber numberWithDouble:_accelerometerFilter] forKey:@"accelerometerFilter"];
     [standardUserDefaults setObject:[NSNumber numberWithDouble:_dualJoystickDeadZone] forKey:@"dualJoystickDeadZone"];
     [standardUserDefaults setObject:_ipAddress forKey:@"ipAddress"];
     [standardUserDefaults setObject:_cameraAddress forKey:@"cameraAddress"];
